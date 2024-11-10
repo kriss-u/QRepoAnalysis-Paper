@@ -1,0 +1,37 @@
+category_1,category_2,chi_square,p_value
+SDK/API,Quantum Simulation,209.83955574819046,1.4889162017117206e-47
+SDK/API,Algorithm Implementation,72.03089765200784,2.1185409959641423e-17
+SDK/API,Education/Tutorials,2.6709373428594705,0.10219581893415212
+SDK/API,Circuit Optimization,4.303702557701555,0.038029493154474264
+SDK/API,Compiler/Transpiler,0.045181798131993654,0.8316700920672798
+SDK/API,Quantum Chemistry,78.30603728610349,8.825172399404794e-19
+SDK/API,Quantum Machine Learning,82.98729860029923,8.258231769545641e-20
+SDK/API,Benchmarking Tools,0.0,1.0
+Quantum Simulation,Algorithm Implementation,3.0882392390179474,0.07886009838148422
+Quantum Simulation,Education/Tutorials,84.65905090747643,3.545173121553154e-20
+Quantum Simulation,Circuit Optimization,12.900377872926567,0.0003285158019111814
+Quantum Simulation,Compiler/Transpiler,54.06647708115215,1.9381994960555387e-13
+Quantum Simulation,Quantum Chemistry,3.402136504835216,0.06511203243270032
+Quantum Simulation,Quantum Machine Learning,0.0,1.0
+Quantum Simulation,Benchmarking Tools,9.986506786001016,0.0015769146517516195
+Algorithm Implementation,Education/Tutorials,33.707305256430104,6.40596682824286e-09
+Algorithm Implementation,Circuit Optimization,5.076091427042787,0.024257995603167496
+Algorithm Implementation,Compiler/Transpiler,27.972442814791247,1.2305543669623375e-07
+Algorithm Implementation,Quantum Chemistry,8.081994269579013,0.004470721961004229
+Algorithm Implementation,Quantum Machine Learning,1.8099471978090507,0.1785145641318589
+Algorithm Implementation,Benchmarking Tools,5.5858230393741115,0.018106422868824232
+Education/Tutorials,Circuit Optimization,1.4373595204601721,0.23056710577696377
+Education/Tutorials,Compiler/Transpiler,1.1011998395485338,0.2940029404141151
+Education/Tutorials,Quantum Chemistry,51.20138872647538,8.335963563284114e-13
+Education/Tutorials,Quantum Machine Learning,45.35102883328862,1.647014642214126e-11
+Education/Tutorials,Benchmarking Tools,0.021363439669187287,0.8837932074530827
+Circuit Optimization,Compiler/Transpiler,3.2137693208650613,0.07302108364184465
+Circuit Optimization,Quantum Chemistry,17.781216779517564,2.478177166614242e-05
+Circuit Optimization,Quantum Machine Learning,10.0768296375916,0.0015014545448140363
+Circuit Optimization,Benchmarking Tools,0.6140373831775708,0.43327170113828606
+Compiler/Transpiler,Quantum Chemistry,46.527913462436054,9.032259124072002e-12
+Compiler/Transpiler,Quantum Machine Learning,37.985141179198955,7.128546531170657e-10
+Compiler/Transpiler,Benchmarking Tools,0.003556307670413198,0.952446512644587
+Quantum Chemistry,Quantum Machine Learning,2.6015977838391775,0.10675603911428132
+Quantum Chemistry,Benchmarking Tools,14.93844049247606,0.00011107651221208574
+Quantum Machine Learning,Benchmarking Tools,8.985769577450734,0.00272090174479573

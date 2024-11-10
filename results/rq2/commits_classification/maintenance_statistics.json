@@ -1,0 +1,204 @@
+{
+  "total": {
+    "repositories": 10791,
+    "commits": 1232828,
+    "high_maintenance": {
+      "repositories": 3562,
+      "commits": 666381
+    },
+    "low_maintenance": {
+      "repositories": 4984,
+      "commits": 46435
+    },
+    "unclassified": {
+      "repositories": 2245,
+      "commits": 520012
+    }
+  },
+  "by_classification": {
+    "Adaptive": {
+      "total": {
+        "repositories": 7035,
+        "commits": 167664
+      },
+      "high_maintenance": {
+        "repositories": 3304,
+        "commits": 127971
+      },
+      "low_maintenance": {
+        "repositories": 2839,
+        "commits": 9949
+      },
+      "unclassified": {
+        "repositories": 892,
+        "commits": 29744
+      },
+      "percentage_in_high": 76.33,
+      "percentage_in_low": 5.93
+    },
+    "Adaptive Perfective": {
+      "total": {
+        "repositories": 4529,
+        "commits": 43922
+      },
+      "high_maintenance": {
+        "repositories": 2765,
+        "commits": 34146
+      },
+      "low_maintenance": {
+        "repositories": 1088,
+        "commits": 3045
+      },
+      "unclassified": {
+        "repositories": 676,
+        "commits": 6731
+      },
+      "percentage_in_high": 77.74,
+      "percentage_in_low": 6.93
+    },
+    "Corrective": {
+      "total": {
+        "repositories": 7336,
+        "commits": 184531
+      },
+      "high_maintenance": {
+        "repositories": 3312,
+        "commits": 125582
+      },
+      "low_maintenance": {
+        "repositories": 2362,
+        "commits": 9130
+      },
+      "unclassified": {
+        "repositories": 1662,
+        "commits": 49819
+      },
+      "percentage_in_high": 68.05,
+      "percentage_in_low": 4.95
+    },
+    "Corrective Adaptive": {
+      "total": {
+        "repositories": 1150,
+        "commits": 2559
+      },
+      "high_maintenance": {
+        "repositories": 834,
+        "commits": 1850
+      },
+      "low_maintenance": {
+        "repositories": 144,
+        "commits": 184
+      },
+      "unclassified": {
+        "repositories": 172,
+        "commits": 525
+      },
+      "percentage_in_high": 72.29,
+      "percentage_in_low": 7.19
+    },
+    "Corrective Adaptive Perfective": {
+      "total": {
+        "repositories": 1,
+        "commits": 1
+      },
+      "high_maintenance": {
+        "repositories": 1,
+        "commits": 1
+      },
+      "low_maintenance": {
+        "repositories": 0,
+        "commits": 0
+      },
+      "unclassified": {
+        "repositories": 0,
+        "commits": 0
+      },
+      "percentage_in_high": 100.0,
+      "percentage_in_low": 0.0
+    },
+    "Corrective Perfective": {
+      "total": {
+        "repositories": 2090,
+        "commits": 9015
+      },
+      "high_maintenance": {
+        "repositories": 1499,
+        "commits": 7215
+      },
+      "low_maintenance": {
+        "repositories": 290,
+        "commits": 416
+      },
+      "unclassified": {
+        "repositories": 301,
+        "commits": 1384
+      },
+      "percentage_in_high": 80.03,
+      "percentage_in_low": 4.61
+    },
+    "Perfective": {
+      "total": {
+        "repositories": 9370,
+        "commits": 485355
+      },
+      "high_maintenance": {
+        "repositories": 3540,
+        "commits": 354567
+      },
+      "low_maintenance": {
+        "repositories": 4068,
+        "commits": 23570
+      },
+      "unclassified": {
+        "repositories": 1762,
+        "commits": 107218
+      },
+      "percentage_in_high": 73.05,
+      "percentage_in_low": 4.86
+    },
+    "Unknown": {
+      "total": {
+        "repositories": 2092,
+        "commits": 319769
+      },
+      "high_maintenance": {
+        "repositories": 9,
+        "commits": 18
+      },
+      "low_maintenance": {
+        "repositories": 3,
+        "commits": 3
+      },
+      "unclassified": {
+        "repositories": 2080,
+        "commits": 319748
+      },
+      "percentage_in_high": 0.01,
+      "percentage_in_low": 0.0
+    },
+    "nan": {
+      "total": {
+        "repositories": 1404,
+        "commits": 20012
+      },
+      "high_maintenance": {
+        "repositories": 1039,
+        "commits": 15031
+      },
+      "low_maintenance": {
+        "repositories": 113,
+        "commits": 138
+      },
+      "unclassified": {
+        "repositories": 252,
+        "commits": 4843
+      },
+      "percentage_in_high": 75.11,
+      "percentage_in_low": 0.69
+    }
+  },
+  "metadata": {
+    "generated_at": "2024-11-09T10:45:51.160366",
+    "description": "Commit classification statistics by maintenance category"
+  }
+}

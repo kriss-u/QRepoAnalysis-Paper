@@ -1,0 +1,10 @@
+category,high_maintenance_prop,low_maintenance_prop,p_value
+SDK/API,0.6481,0.4753,<0.001
+Quantum Simulation,0.0925,0.1947,<0.001
+Algorithm Implementation,0.0489,0.0833,<0.001
+Education/Tutorials,0.1056,0.0886,0.0131
+Circuit Optimization,0.0176,0.0188,0.693
+Compiler/Transpiler,0.0345,0.0244,0.0086
+Quantum Chemistry,0.0144,0.0427,<0.001
+Quantum Machine Learning,0.032,0.0673,<0.001
+Benchmarking Tools,0.0064,0.0049,0.3753

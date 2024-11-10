@@ -1,0 +1,418 @@
+{
+  "summary_statistics": {
+    "total_unique_authors": 10697,
+    "average_authors_per_period": 423.56716417910445,
+    "max_authors_period": {
+      "period": "2024-06",
+      "count": 1515
+    },
+    "max_new_authors_period": {
+      "period": "2022-06",
+      "count": 610
+    }
+  },
+  "period_data": [
+    {
+      "period": "2008-03-31",
+      "total_authors": 3,
+      "new_authors": 3,
+      "cumulative_authors": 3
+    },
+    {
+      "period": "2008-06-30",
+      "total_authors": 4,
+      "new_authors": 3,
+      "cumulative_authors": 6
+    },
+    {
+      "period": "2008-09-30",
+      "total_authors": 4,
+      "new_authors": 0,
+      "cumulative_authors": 6
+    },
+    {
+      "period": "2008-12-31",
+      "total_authors": 4,
+      "new_authors": 0,
+      "cumulative_authors": 6
+    },
+    {
+      "period": "2009-03-31",
+      "total_authors": 5,
+      "new_authors": 1,
+      "cumulative_authors": 7
+    },
+    {
+      "period": "2009-06-30",
+      "total_authors": 4,
+      "new_authors": 0,
+      "cumulative_authors": 7
+    },
+    {
+      "period": "2009-09-30",
+      "total_authors": 7,
+      "new_authors": 2,
+      "cumulative_authors": 9
+    },
+    {
+      "period": "2009-12-31",
+      "total_authors": 7,
+      "new_authors": 2,
+      "cumulative_authors": 11
+    },
+    {
+      "period": "2010-03-31",
+      "total_authors": 9,
+      "new_authors": 2,
+      "cumulative_authors": 13
+    },
+    {
+      "period": "2010-06-30",
+      "total_authors": 10,
+      "new_authors": 2,
+      "cumulative_authors": 15
+    },
+    {
+      "period": "2010-09-30",
+      "total_authors": 10,
+      "new_authors": 1,
+      "cumulative_authors": 16
+    },
+    {
+      "period": "2010-12-31",
+      "total_authors": 11,
+      "new_authors": 1,
+      "cumulative_authors": 17
+    },
+    {
+      "period": "2011-03-31",
+      "total_authors": 13,
+      "new_authors": 4,
+      "cumulative_authors": 21
+    },
+    {
+      "period": "2011-06-30",
+      "total_authors": 20,
+      "new_authors": 7,
+      "cumulative_authors": 28
+    },
+    {
+      "period": "2011-09-30",
+      "total_authors": 16,
+      "new_authors": 3,
+      "cumulative_authors": 31
+    },
+    {
+      "period": "2011-12-31",
+      "total_authors": 22,
+      "new_authors": 8,
+      "cumulative_authors": 39
+    },
+    {
+      "period": "2012-03-31",
+      "total_authors": 25,
+      "new_authors": 10,
+      "cumulative_authors": 49
+    },
+    {
+      "period": "2012-06-30",
+      "total_authors": 26,
+      "new_authors": 4,
+      "cumulative_authors": 53
+    },
+    {
+      "period": "2012-09-30",
+      "total_authors": 20,
+      "new_authors": 4,
+      "cumulative_authors": 57
+    },
+    {
+      "period": "2012-12-31",
+      "total_authors": 23,
+      "new_authors": 2,
+      "cumulative_authors": 59
+    },
+    {
+      "period": "2013-03-31",
+      "total_authors": 26,
+      "new_authors": 5,
+      "cumulative_authors": 64
+    },
+    {
+      "period": "2013-06-30",
+      "total_authors": 26,
+      "new_authors": 7,
+      "cumulative_authors": 71
+    },
+    {
+      "period": "2013-09-30",
+      "total_authors": 20,
+      "new_authors": 4,
+      "cumulative_authors": 75
+    },
+    {
+      "period": "2013-12-31",
+      "total_authors": 26,
+      "new_authors": 10,
+      "cumulative_authors": 85
+    },
+    {
+      "period": "2014-03-31",
+      "total_authors": 30,
+      "new_authors": 9,
+      "cumulative_authors": 94
+    },
+    {
+      "period": "2014-06-30",
+      "total_authors": 45,
+      "new_authors": 19,
+      "cumulative_authors": 113
+    },
+    {
+      "period": "2014-09-30",
+      "total_authors": 27,
+      "new_authors": 8,
+      "cumulative_authors": 121
+    },
+    {
+      "period": "2014-12-31",
+      "total_authors": 30,
+      "new_authors": 9,
+      "cumulative_authors": 130
+    },
+    {
+      "period": "2015-03-31",
+      "total_authors": 44,
+      "new_authors": 19,
+      "cumulative_authors": 149
+    },
+    {
+      "period": "2015-06-30",
+      "total_authors": 52,
+      "new_authors": 15,
+      "cumulative_authors": 164
+    },
+    {
+      "period": "2015-09-30",
+      "total_authors": 56,
+      "new_authors": 18,
+      "cumulative_authors": 182
+    },
+    {
+      "period": "2015-12-31",
+      "total_authors": 69,
+      "new_authors": 26,
+      "cumulative_authors": 208
+    },
+    {
+      "period": "2016-03-31",
+      "total_authors": 75,
+      "new_authors": 25,
+      "cumulative_authors": 233
+    },
+    {
+      "period": "2016-06-30",
+      "total_authors": 122,
+      "new_authors": 58,
+      "cumulative_authors": 291
+    },
+    {
+      "period": "2016-09-30",
+      "total_authors": 130,
+      "new_authors": 38,
+      "cumulative_authors": 329
+    },
+    {
+      "period": "2016-12-31",
+      "total_authors": 124,
+      "new_authors": 38,
+      "cumulative_authors": 367
+    },
+    {
+      "period": "2017-03-31",
+      "total_authors": 172,
+      "new_authors": 69,
+      "cumulative_authors": 436
+    },
+    {
+      "period": "2017-06-30",
+      "total_authors": 217,
+      "new_authors": 94,
+      "cumulative_authors": 530
+    },
+    {
+      "period": "2017-09-30",
+      "total_authors": 238,
+      "new_authors": 100,
+      "cumulative_authors": 630
+    },
+    {
+      "period": "2017-12-31",
+      "total_authors": 284,
+      "new_authors": 133,
+      "cumulative_authors": 763
+    },
+    {
+      "period": "2018-03-31",
+      "total_authors": 299,
+      "new_authors": 132,
+      "cumulative_authors": 895
+    },
+    {
+      "period": "2018-06-30",
+      "total_authors": 395,
+      "new_authors": 165,
+      "cumulative_authors": 1060
+    },
+    {
+      "period": "2018-09-30",
+      "total_authors": 436,
+      "new_authors": 168,
+      "cumulative_authors": 1228
+    },
+    {
+      "period": "2018-12-31",
+      "total_authors": 479,
+      "new_authors": 189,
+      "cumulative_authors": 1417
+    },
+    {
+      "period": "2019-03-31",
+      "total_authors": 523,
+      "new_authors": 211,
+      "cumulative_authors": 1628
+    },
+    {
+      "period": "2019-06-30",
+      "total_authors": 594,
+      "new_authors": 259,
+      "cumulative_authors": 1887
+    },
+    {
+      "period": "2019-09-30",
+      "total_authors": 632,
+      "new_authors": 257,
+      "cumulative_authors": 2144
+    },
+    {
+      "period": "2019-12-31",
+      "total_authors": 645,
+      "new_authors": 276,
+      "cumulative_authors": 2420
+    },
+    {
+      "period": "2020-03-31",
+      "total_authors": 753,
+      "new_authors": 330,
+      "cumulative_authors": 2750
+    },
+    {
+      "period": "2020-06-30",
+      "total_authors": 766,
+      "new_authors": 323,
+      "cumulative_authors": 3073
+    },
+    {
+      "period": "2020-09-30",
+      "total_authors": 784,
+      "new_authors": 313,
+      "cumulative_authors": 3386
+    },
+    {
+      "period": "2020-12-31",
+      "total_authors": 825,
+      "new_authors": 301,
+      "cumulative_authors": 3687
+    },
+    {
+      "period": "2021-03-31",
+      "total_authors": 876,
+      "new_authors": 344,
+      "cumulative_authors": 4031
+    },
+    {
+      "period": "2021-06-30",
+      "total_authors": 1010,
+      "new_authors": 392,
+      "cumulative_authors": 4423
+    },
+    {
+      "period": "2021-09-30",
+      "total_authors": 1139,
+      "new_authors": 479,
+      "cumulative_authors": 4902
+    },
+    {
+      "period": "2021-12-31",
+      "total_authors": 1295,
+      "new_authors": 599,
+      "cumulative_authors": 5501
+    },
+    {
+      "period": "2022-03-31",
+      "total_authors": 1195,
+      "new_authors": 459,
+      "cumulative_authors": 5960
+    },
+    {
+      "period": "2022-06-30",
+      "total_authors": 1432,
+      "new_authors": 610,
+      "cumulative_authors": 6570
+    },
+    {
+      "period": "2022-09-30",
+      "total_authors": 1352,
+      "new_authors": 456,
+      "cumulative_authors": 7026
+    },
+    {
+      "period": "2022-12-31",
+      "total_authors": 1252,
+      "new_authors": 439,
+      "cumulative_authors": 7465
+    },
+    {
+      "period": "2023-03-31",
+      "total_authors": 1306,
+      "new_authors": 435,
+      "cumulative_authors": 7900
+    },
+    {
+      "period": "2023-06-30",
+      "total_authors": 1461,
+      "new_authors": 521,
+      "cumulative_authors": 8421
+    },
+    {
+      "period": "2023-09-30",
+      "total_authors": 1340,
+      "new_authors": 443,
+      "cumulative_authors": 8864
+    },
+    {
+      "period": "2023-12-31",
+      "total_authors": 1214,
+      "new_authors": 364,
+      "cumulative_authors": 9228
+    },
+    {
+      "period": "2024-03-31",
+      "total_authors": 1346,
+      "new_authors": 458,
+      "cumulative_authors": 9686
+    },
+    {
+      "period": "2024-06-30",
+      "total_authors": 1515,
+      "new_authors": 526,
+      "cumulative_authors": 10212
+    },
+    {
+      "period": "2024-09-30",
+      "total_authors": 1459,
+      "new_authors": 485,
+      "cumulative_authors": 10697
+    }
+  ]
+}

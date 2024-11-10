@@ -1,0 +1,86 @@
+{
+  "frameworks": {
+    "Qiskit": {
+      "total_repositories": 8561,
+      "total_contributors": 2231
+    },
+    "Cirq": {
+      "total_repositories": 3338,
+      "total_contributors": 1205
+    },
+    "QuTiP": {
+      "total_repositories": 1743,
+      "total_contributors": 673
+    },
+    "Amazon Braket": {
+      "total_repositories": 1525,
+      "total_contributors": 292
+    },
+    "PennyLane": {
+      "total_repositories": 1464,
+      "total_contributors": 558
+    },
+    "QDK": {
+      "total_repositories": 1299,
+      "total_contributors": 286
+    },
+    "OpenFermion": {
+      "total_repositories": 979,
+      "total_contributors": 318
+    },
+    "PyQuil": {
+      "total_repositories": 610,
+      "total_contributors": 239
+    },
+    "OpenQASM 3": {
+      "total_repositories": 561,
+      "total_contributors": 227
+    },
+    "QuEST": {
+      "total_repositories": 530,
+      "total_contributors": 243
+    }
+  },
+  "languages": {
+    "Python": {
+      "total_repositories": 18946,
+      "total_contributors": 5343
+    },
+    "C++": {
+      "total_repositories": 2182,
+      "total_contributors": 690
+    },
+    "Q#": {
+      "total_repositories": 1299,
+      "total_contributors": 286
+    },
+    "Julia": {
+      "total_repositories": 429,
+      "total_contributors": 131
+    },
+    "JavaScript": {
+      "total_repositories": 332,
+      "total_contributors": 48
+    },
+    "Rust": {
+      "total_repositories": 212,
+      "total_contributors": 106
+    },
+    "OpenQASM": {
+      "total_repositories": 161,
+      "total_contributors": 82
+    },
+    "F#": {
+      "total_repositories": 100,
+      "total_contributors": 2
+    },
+    "Lisp": {
+      "total_repositories": 78,
+      "total_contributors": 39
+    },
+    "Java": {
+      "total_repositories": 62,
+      "total_contributors": 13
+    }
+  }
+}

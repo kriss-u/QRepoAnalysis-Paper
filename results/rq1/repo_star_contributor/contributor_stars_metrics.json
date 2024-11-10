@@ -1,0 +1,57 @@
+{
+  "correlations": {
+    "spearman": -0.13693127767460916,
+    "pearson": 0.014474129174164931
+  },
+  "overall_stats": {
+    "total_repositories": 23470,
+    "mean_stars": 2.830592245419685,
+    "median_stars": 0.0,
+    "mean_contributors": 59.49433319130805,
+    "median_contributors": 25.0
+  },
+  "binned_statistics": {
+    "1-5": {
+      "mean_stars": 2.25,
+      "median_stars": 0.0,
+      "count": 4684,
+      "std": 20.3,
+      "sem": 0.3
+    },
+    "6-10": {
+      "mean_stars": 3.24,
+      "median_stars": 0.0,
+      "count": 2275,
+      "std": 39.7,
+      "sem": 0.83
+    },
+    "11-20": {
+      "mean_stars": 1.47,
+      "median_stars": 0.0,
+      "count": 3298,
+      "std": 18.35,
+      "sem": 0.32
+    },
+    "21-50": {
+      "mean_stars": 3.53,
+      "median_stars": 0.0,
+      "count": 5900,
+      "std": 53.33,
+      "sem": 0.69
+    },
+    "51-100": {
+      "mean_stars": 2.54,
+      "median_stars": 0.0,
+      "count": 3110,
+      "std": 49.43,
+      "sem": 0.89
+    },
+    "100+": {
+      "mean_stars": 3.55,
+      "median_stars": 0.0,
+      "count": 4203,
+      "std": 112.82,
+      "sem": 1.74
+    }
+  }
+}

@@ -1,0 +1,15 @@
+node,num_frameworks,degree,centrality,cluster_id,position,Based at,Research Scientist,Quantum software developer,Graduate student ,Physicist,bot
+nonhermitian,3,667,0.638888889,2,Principal Research Scientist, IBM Quantum,1,0,0,0,0
+jakelishman,3,667,0.638888889,2,"Quantum software developer, PhD student ",IBM,0,1,1,0,0
+mtreinish,3,667,0.638888889,2,"Open Source Software Engineer, ",ibm,0,1,0,0,0
+king-p3nguin,3,681,0.652298851,0,Graduate student ,university of Tokyo,0,0,1,0,0
+drewrisinger,3,725,0.694444444,5,Computer Engineering PhD ,"Intel,University of Maryland",0,0,1,0,0
+paniash,3,771,0.738505747,0,Experimental physicist,,0,0,0,1,0
+EmilianoG-byte,3,771,0.738505747,0,Quantum physics master student,TUM,0,0,1,0,0
+tgag17,3,771,0.738505747,0,Computer Science masters student ,Georgia Institute of Technology,0,0,1,0,0
+nathanshammah,3,817,0.78256705,5,"Chief Strategy Officer, physicist ",Quantum Italia,0,1,0,1,0
+ryanhill1,3,830,0.795019157,5,"Chief Technology Officer, physicist",qBraid ,0,1,0,1,0
+JiahaoYao,4,877,0.840038314,5,Ph.D. ,"UCB Math,",0,0,1,0,0
+eendebakpt,4,960,0.91954023,0,Quantum engineer,QuTech,0,1,0,0,0
+dependabot[bot],5,998,0.955938697,0,bot,,0,0,0,0,1
+total,,,,,,,1,5,6,3,1

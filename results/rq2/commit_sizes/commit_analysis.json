@@ -1,0 +1,1433 @@
+{
+  "quarterly_summary": {
+    "2008Q1": {
+      "additions": 11007,
+      "deletions": 537,
+      "files_changed": 252,
+      "commit_count": 18
+    },
+    "2008Q2": {
+      "additions": 27169,
+      "deletions": 4791,
+      "files_changed": 1253,
+      "commit_count": 69
+    },
+    "2008Q3": {
+      "additions": 23211,
+      "deletions": 4552,
+      "files_changed": 1926,
+      "commit_count": 86
+    },
+    "2008Q4": {
+      "additions": 6334,
+      "deletions": 5161,
+      "files_changed": 1659,
+      "commit_count": 63
+    },
+    "2009Q1": {
+      "additions": 10361,
+      "deletions": 5342,
+      "files_changed": 1443,
+      "commit_count": 131
+    },
+    "2009Q2": {
+      "additions": 11610,
+      "deletions": 5285,
+      "files_changed": 1308,
+      "commit_count": 130
+    },
+    "2009Q3": {
+      "additions": 38914,
+      "deletions": 17943,
+      "files_changed": 3336,
+      "commit_count": 114
+    },
+    "2009Q4": {
+      "additions": 224093,
+      "deletions": 151141,
+      "files_changed": 7388,
+      "commit_count": 250
+    },
+    "2010Q1": {
+      "additions": 106479,
+      "deletions": 66085,
+      "files_changed": 6797,
+      "commit_count": 307
+    },
+    "2010Q2": {
+      "additions": 28144,
+      "deletions": 45270,
+      "files_changed": 3744,
+      "commit_count": 206
+    },
+    "2010Q3": {
+      "additions": 58660,
+      "deletions": 46481,
+      "files_changed": 5329,
+      "commit_count": 283
+    },
+    "2010Q4": {
+      "additions": 188862,
+      "deletions": 5260,
+      "files_changed": 4404,
+      "commit_count": 126
+    },
+    "2011Q1": {
+      "additions": 168447,
+      "deletions": 19749,
+      "files_changed": 2978,
+      "commit_count": 144
+    },
+    "2011Q2": {
+      "additions": 679761,
+      "deletions": 109151,
+      "files_changed": 11513,
+      "commit_count": 629
+    },
+    "2011Q3": {
+      "additions": 44941,
+      "deletions": 22705,
+      "files_changed": 3424,
+      "commit_count": 402
+    },
+    "2011Q4": {
+      "additions": 92376,
+      "deletions": 56630,
+      "files_changed": 7216,
+      "commit_count": 788
+    },
+    "2012Q1": {
+      "additions": 83438,
+      "deletions": 38321,
+      "files_changed": 6902,
+      "commit_count": 750
+    },
+    "2012Q2": {
+      "additions": 87412,
+      "deletions": 91376,
+      "files_changed": 6811,
+      "commit_count": 769
+    },
+    "2012Q3": {
+      "additions": 75007,
+      "deletions": 40801,
+      "files_changed": 3469,
+      "commit_count": 489
+    },
+    "2012Q4": {
+      "additions": 63458,
+      "deletions": 45720,
+      "files_changed": 4002,
+      "commit_count": 540
+    },
+    "2013Q1": {
+      "additions": 131420,
+      "deletions": 65556,
+      "files_changed": 10088,
+      "commit_count": 1408
+    },
+    "2013Q2": {
+      "additions": 91850,
+      "deletions": 47269,
+      "files_changed": 7232,
+      "commit_count": 926
+    },
+    "2013Q3": {
+      "additions": 217490,
+      "deletions": 152258,
+      "files_changed": 12804,
+      "commit_count": 576
+    },
+    "2013Q4": {
+      "additions": 188304,
+      "deletions": 53968,
+      "files_changed": 4480,
+      "commit_count": 522
+    },
+    "2014Q1": {
+      "additions": 100407,
+      "deletions": 82774,
+      "files_changed": 5531,
+      "commit_count": 847
+    },
+    "2014Q2": {
+      "additions": 202999,
+      "deletions": 70169,
+      "files_changed": 11208,
+      "commit_count": 1754
+    },
+    "2014Q3": {
+      "additions": 2840559,
+      "deletions": 133527,
+      "files_changed": 38928,
+      "commit_count": 1062
+    },
+    "2014Q4": {
+      "additions": 1142761,
+      "deletions": 932841,
+      "files_changed": 96210,
+      "commit_count": 3098
+    },
+    "2015Q1": {
+      "additions": 438729,
+      "deletions": 234406,
+      "files_changed": 29721,
+      "commit_count": 1187
+    },
+    "2015Q2": {
+      "additions": 181895,
+      "deletions": 105101,
+      "files_changed": 25835,
+      "commit_count": 1647
+    },
+    "2015Q3": {
+      "additions": 148403,
+      "deletions": 84345,
+      "files_changed": 11605,
+      "commit_count": 1307
+    },
+    "2015Q4": {
+      "additions": 918752,
+      "deletions": 139572,
+      "files_changed": 38602,
+      "commit_count": 1892
+    },
+    "2016Q1": {
+      "additions": 1493603,
+      "deletions": 711868,
+      "files_changed": 34826,
+      "commit_count": 2664
+    },
+    "2016Q2": {
+      "additions": 10934893,
+      "deletions": 5484918,
+      "files_changed": 63724,
+      "commit_count": 4312
+    },
+    "2016Q3": {
+      "additions": 2838927,
+      "deletions": 2988852,
+      "files_changed": 38969,
+      "commit_count": 4255
+    },
+    "2016Q4": {
+      "additions": 1867824,
+      "deletions": 1299698,
+      "files_changed": 70735,
+      "commit_count": 3925
+    },
+    "2017Q1": {
+      "additions": 1201347,
+      "deletions": 516907,
+      "files_changed": 50282,
+      "commit_count": 6170
+    },
+    "2017Q2": {
+      "additions": 2786804,
+      "deletions": 1200789,
+      "files_changed": 87193,
+      "commit_count": 12505
+    },
+    "2017Q3": {
+      "additions": 3867278,
+      "deletions": 1999002,
+      "files_changed": 106139,
+      "commit_count": 12523
+    },
+    "2017Q4": {
+      "additions": 10628923,
+      "deletions": 1760134,
+      "files_changed": 174611,
+      "commit_count": 11087
+    },
+    "2018Q1": {
+      "additions": 3141069,
+      "deletions": 1913233,
+      "files_changed": 117263,
+      "commit_count": 18685
+    },
+    "2018Q2": {
+      "additions": 6318924,
+      "deletions": 4152854,
+      "files_changed": 150899,
+      "commit_count": 15219
+    },
+    "2018Q3": {
+      "additions": 14791321,
+      "deletions": 9297127,
+      "files_changed": 277681,
+      "commit_count": 19435
+    },
+    "2018Q4": {
+      "additions": 9057962,
+      "deletions": 3021509,
+      "files_changed": 228724,
+      "commit_count": 18966
+    },
+    "2019Q1": {
+      "additions": 12795746,
+      "deletions": 3081506,
+      "files_changed": 313402,
+      "commit_count": 16944
+    },
+    "2019Q2": {
+      "additions": 41886003,
+      "deletions": 7052531,
+      "files_changed": 376574,
+      "commit_count": 26260
+    },
+    "2019Q3": {
+      "additions": 15046029,
+      "deletions": 7667745,
+      "files_changed": 399943,
+      "commit_count": 25849
+    },
+    "2019Q4": {
+      "additions": 31698650,
+      "deletions": 35349478,
+      "files_changed": 629069,
+      "commit_count": 45801
+    },
+    "2020Q1": {
+      "additions": 13809498,
+      "deletions": 9416176,
+      "files_changed": 437324,
+      "commit_count": 44456
+    },
+    "2020Q2": {
+      "additions": 13071901,
+      "deletions": 9510972,
+      "files_changed": 609489,
+      "commit_count": 77339
+    },
+    "2020Q3": {
+      "additions": 60879322,
+      "deletions": 12064221,
+      "files_changed": 953615,
+      "commit_count": 91745
+    },
+    "2020Q4": {
+      "additions": 11025561,
+      "deletions": 4960760,
+      "files_changed": 551651,
+      "commit_count": 50473
+    },
+    "2021Q1": {
+      "additions": 28957680,
+      "deletions": 16784613,
+      "files_changed": 446320,
+      "commit_count": 59220
+    },
+    "2021Q2": {
+      "additions": 26503811,
+      "deletions": 7543228,
+      "files_changed": 1764847,
+      "commit_count": 62573
+    },
+    "2021Q3": {
+      "additions": 22229089,
+      "deletions": 5036579,
+      "files_changed": 1203590,
+      "commit_count": 67132
+    },
+    "2021Q4": {
+      "additions": 19314297,
+      "deletions": 26395575,
+      "files_changed": 1129132,
+      "commit_count": 63670
+    },
+    "2022Q1": {
+      "additions": 26491974,
+      "deletions": 15478827,
+      "files_changed": 1176630,
+      "commit_count": 77314
+    },
+    "2022Q2": {
+      "additions": 21737246,
+      "deletions": 13846288,
+      "files_changed": 554146,
+      "commit_count": 58617
+    },
+    "2022Q3": {
+      "additions": 18131995,
+      "deletions": 6190547,
+      "files_changed": 324574,
+      "commit_count": 34133
+    },
+    "2022Q4": {
+      "additions": 12816278,
+      "deletions": 7954941,
+      "files_changed": 439825,
+      "commit_count": 34548
+    },
+    "2023Q1": {
+      "additions": 47735184,
+      "deletions": 11388444,
+      "files_changed": 741065,
+      "commit_count": 33141
+    },
+    "2023Q2": {
+      "additions": 22653768,
+      "deletions": 12096685,
+      "files_changed": 436994,
+      "commit_count": 29333
+    },
+    "2023Q3": {
+      "additions": 19653575,
+      "deletions": 9636350,
+      "files_changed": 459497,
+      "commit_count": 27320
+    },
+    "2023Q4": {
+      "additions": 107903760,
+      "deletions": 22095979,
+      "files_changed": 442087,
+      "commit_count": 24401
+    },
+    "2024Q1": {
+      "additions": 757898801,
+      "deletions": 222443543,
+      "files_changed": 1764756,
+      "commit_count": 37522
+    },
+    "2024Q2": {
+      "additions": 57967171,
+      "deletions": 39649485,
+      "files_changed": 610077,
+      "commit_count": 38705
+    },
+    "2024Q3": {
+      "additions": 613637036,
+      "deletions": 509146467,
+      "files_changed": 581824,
+      "commit_count": 32873
+    }
+  },
+  "high_impact_analysis": {
+    "total_commits": 1211635,
+    "high_impact_count": 60585,
+    "high_impact_percentage": 5.0002682325948,
+    "percentiles": {
+      "additions": {
+        "75": 51,
+        "90": 194,
+        "95": 439,
+        "99": 2430
+      },
+      "deletions": {
+        "75": 19,
+        "90": 78,
+        "95": 186,
+        "99": 1382
+      },
+      "total_changes": {
+        "75": 83,
+        "90": 310,
+        "95": 704,
+        "99": 4255
+      }
+    },
+    "high_impact_commits": [
+      {
+        "date": "2024-03-28T13:17:04+00:00",
+        "repo_name": "System-Verification-Lab/Quokka-Sharp",
+        "additions": 481932692,
+        "deletions": 0,
+        "files_changed": 3871,
+        "commit_hash": "e4b77fb5e60f72425bd8d7ff391844b538a97bbd",
+        "subject": "WMCbench",
+        "total_changes": 481932692
+      },
+      {
+        "date": "2024-07-18T14:01:50+00:00",
+        "repo_name": "System-Verification-Lab/Quokka-Sharp",
+        "additions": 4,
+        "deletions": 481930950,
+        "files_changed": 3875,
+        "commit_hash": "14608b1db3cc04446c86678392cff80c73562b7f",
+        "subject": "wmcbench",
+        "total_changes": 481930954
+      },
+      {
+        "date": "2024-07-18T15:08:19+00:00",
+        "repo_name": "System-Verification-Lab/Quokka-Sharp",
+        "additions": 420535018,
+        "deletions": 2,
+        "files_changed": 4021,
+        "commit_hash": "c7e9cb5679cf0e85e03dbf0926e51e51647c7f7d",
+        "subject": "WMCBench",
+        "total_changes": 420535020
+      },
+      {
+        "date": "2024-09-06T08:46:56+00:00",
+        "repo_name": "LSHerzog/mqt-qsim-joint-cutting",
+        "additions": 64026298,
+        "deletions": 1689,
+        "files_changed": 759,
+        "commit_hash": "bfa81ef28b27858cfbedc2407bc701223efb32ce",
+        "subject": ":memo: Added log files for Supremacy Circuit Benchmarks",
+        "total_changes": 64027987
+      },
+      {
+        "date": "2024-01-11T12:54:20+00:00",
+        "repo_name": "sbrandhsn/qiskit",
+        "additions": 61395190,
+        "deletions": 0,
+        "files_changed": 334161,
+        "commit_hash": "5167a8fd7b77ca57aeafab67ae69d522691e533a",
+        "subject": "fixes qpy error",
+        "total_changes": 61395190
+      },
+      {
+        "date": "2024-01-11T13:03:24+00:00",
+        "repo_name": "sbrandhsn/qiskit",
+        "additions": 0,
+        "deletions": 61395187,
+        "files_changed": 334159,
+        "commit_hash": "e581ed40d7d53c3dbb26675f4c3764534eccebfa",
+        "subject": "fix temporary files",
+        "total_changes": 61395187
+      },
+      {
+        "date": "2024-03-21T13:03:09+00:00",
+        "repo_name": "junyeeeeeeeeee/Quela_Qblox",
+        "additions": 47459794,
+        "deletions": 6726403,
+        "files_changed": 19515,
+        "commit_hash": "5da96dc0318d4561a33dab337afb93ff8950d02c",
+        "subject": "push",
+        "total_changes": 54186197
+      },
+      {
+        "date": "2024-06-28T10:37:26+00:00",
+        "repo_name": "System-Verification-Lab/Quokka-Sharp",
+        "additions": 17871618,
+        "deletions": 17149249,
+        "files_changed": 3887,
+        "commit_hash": "d029c38e3676f03b34e2ac4ac652b3d3f5048750",
+        "subject": "WMCBench",
+        "total_changes": 35020867
+      },
+      {
+        "date": "2024-03-28T09:22:17+00:00",
+        "repo_name": "junyeeeeeeeeee/Quela_Qblox",
+        "additions": 86,
+        "deletions": 33656404,
+        "files_changed": 8187,
+        "commit_hash": "aa6ca50731e48f9c5d8bc7e68272d013e1d67a26",
+        "subject": "please install sympy in your Qblox env",
+        "total_changes": 33656490
+      },
+      {
+        "date": "2024-07-11T23:11:02+00:00",
+        "repo_name": "TIES-Hardware-Security/QCEC",
+        "additions": 29944747,
+        "deletions": 5,
+        "files_changed": 9361,
+        "commit_hash": "28f2d9702fd73555160aebf155ce2213644d2ae2",
+        "subject": "Update QCEC",
+        "total_changes": 29944752
+      },
+      {
+        "date": "2024-09-06T07:44:19+00:00",
+        "repo_name": "LSHerzog/mqt-qsim-joint-cutting",
+        "additions": 28003974,
+        "deletions": 80,
+        "files_changed": 363,
+        "commit_hash": "6ffa59e8423815850e66ef0b2ab6c7e86a5a2489",
+        "subject": ":memo: Added log files for MaxCut Benchmarks",
+        "total_changes": 28004054
+      },
+      {
+        "date": "2024-02-01T21:46:58+00:00",
+        "repo_name": "System-Verification-Lab/Quokka-Sharp",
+        "additions": 637933,
+        "deletions": 27025377,
+        "files_changed": 7707,
+        "commit_hash": "d65d8e83447a0a1e733df4fe2295aaf714367dcc",
+        "subject": "benchmarks",
+        "total_changes": 27663310
+      },
+      {
+        "date": "2023-10-14T16:49:15+00:00",
+        "repo_name": "MarlQ/qfr",
+        "additions": 24776616,
+        "deletions": 5,
+        "files_changed": 1039,
+        "commit_hash": "83b3e65d7c3fa12e018f36544e2c673240c26e05",
+        "subject": "Changed file paths to relative. Included benchmark circuits.",
+        "total_changes": 24776621
+      },
+      {
+        "date": "2019-04-08T15:08:17+00:00",
+        "repo_name": "nuraiman/QuEST",
+        "additions": 24229371,
+        "deletions": 2,
+        "files_changed": 24145,
+        "commit_hash": "a0e12cea321235ccd449494050b810ddbf1bfbc7",
+        "subject": "add Random Quantum Circuits program",
+        "total_changes": 24229373
+      },
+      {
+        "date": "2024-03-28T13:09:27+00:00",
+        "repo_name": "System-Verification-Lab/Quokka-Sharp",
+        "additions": 23200384,
+        "deletions": 1,
+        "files_changed": 3879,
+        "commit_hash": "67a3d2516ee906bb95b8eba2b3ad130e3a4bad8b",
+        "subject": "MQTbench",
+        "total_changes": 23200385
+      },
+      {
+        "date": "2023-12-06T22:16:35+00:00",
+        "repo_name": "System-Verification-Lab/Quokka-Sharp",
+        "additions": 20971421,
+        "deletions": 0,
+        "files_changed": 1477,
+        "commit_hash": "4dd6e28ddaee4f80f0344caff96f34208740ece2",
+        "subject": "init",
+        "total_changes": 20971421
+      },
+      {
+        "date": "2024-03-14T11:08:00+00:00",
+        "repo_name": "michaelkoelle/vqc-opt-rl",
+        "additions": 15806034,
+        "deletions": 2,
+        "files_changed": 4857,
+        "commit_hash": "6b4a34ef2f454c382106184f086411791558e750",
+        "subject": "Initial commit",
+        "total_changes": 15806036
+      },
+      {
+        "date": "2024-08-28T18:41:13+00:00",
+        "repo_name": "ItsaFugazi/Qualtran",
+        "additions": 14012895,
+        "deletions": 590,
+        "files_changed": 4837,
+        "commit_hash": "6ec0dc793d29afe847bfda6dac27f1094d46b183",
+        "subject": "Export JSON for static UI",
+        "total_changes": 14013485
+      },
+      {
+        "date": "2024-08-28T18:41:13+00:00",
+        "repo_name": "NoureldinYosri/Qualtran",
+        "additions": 14012895,
+        "deletions": 590,
+        "files_changed": 4837,
+        "commit_hash": "6ec0dc793d29afe847bfda6dac27f1094d46b183",
+        "subject": "Export JSON for static UI",
+        "total_changes": 14013485
+      },
+      {
+        "date": "2024-03-18T06:07:12+00:00",
+        "repo_name": "junyeeeeeeeeee/Quela_Qblox",
+        "additions": 1288,
+        "deletions": 13872902,
+        "files_changed": 7673,
+        "commit_hash": "46cf5f5231d7b3d091efc32f6ce52b39a96dde99",
+        "subject": "1",
+        "total_changes": 13874190
+      },
+      {
+        "date": "2024-03-31T14:48:41+00:00",
+        "repo_name": "junyeeeeeeeeee/Quela_Qblox",
+        "additions": 3,
+        "deletions": 13809948,
+        "files_changed": 7573,
+        "commit_hash": "aefdc0e88ae9ae44cb9e85ee92f622a0ab64b5d0",
+        "subject": "z",
+        "total_changes": 13809951
+      },
+      {
+        "date": "2023-05-31T00:46:25+00:00",
+        "repo_name": "pnnl/NWQ-Sim",
+        "additions": 11238602,
+        "deletions": 594,
+        "files_changed": 873,
+        "commit_hash": "32d4b926b928af9d7b9a9d16c585d7275ee820c5",
+        "subject": "sv mpi added, qasm frontend migrated, benchmark tests passed for cpu, cpu_omp, and cpu_mpi",
+        "total_changes": 11239196
+      },
+      {
+        "date": "2019-09-09T09:01:30+00:00",
+        "repo_name": "DevinaSingh/ScaffCC",
+        "additions": 8812931,
+        "deletions": 1169234,
+        "files_changed": 103641,
+        "commit_hash": "30aeff4b63a5e3b8b342d55113114b2ea98b4f67",
+        "subject": "Updating Clang and LLVM to V.8.0.1",
+        "total_changes": 9982165
+      },
+      {
+        "date": "2024-03-13T21:31:14+00:00",
+        "repo_name": "henryzou50/qiskit",
+        "additions": 9886695,
+        "deletions": 6,
+        "files_changed": 265,
+        "commit_hash": "652a225ba0bf604dbfa09b6f4c7bf5b8c0063029",
+        "subject": "Added redqueen circuits and finished ghz and qvol results",
+        "total_changes": 9886701
+      },
+      {
+        "date": "2024-02-14T07:20:45+00:00",
+        "repo_name": "henryzou50/qiskit",
+        "additions": 9883474,
+        "deletions": 91,
+        "files_changed": 275,
+        "commit_hash": "b4f4d57da7614420616a2bae88e2faf38c01dee2",
+        "subject": "Completed parallel and added new set of experiments",
+        "total_changes": 9883565
+      },
+      {
+        "date": "2024-02-14T07:31:06+00:00",
+        "repo_name": "henryzou50/qiskit",
+        "additions": 0,
+        "deletions": 9864811,
+        "files_changed": 45,
+        "commit_hash": "4d135c3b42631e6d166d0f4cafb5645c72a4aa4c",
+        "subject": "Removed large circuits",
+        "total_changes": 9864811
+      },
+      {
+        "date": "2021-03-19T15:59:38+00:00",
+        "repo_name": "czachow/qiskit-terra",
+        "additions": 160059,
+        "deletions": 9648589,
+        "files_changed": 61,
+        "commit_hash": "92647019aeaeff2283bcc0a3a66035b2f0fc1abd",
+        "subject": "update results for different runs",
+        "total_changes": 9808648
+      },
+      {
+        "date": "2021-03-19T06:42:29+00:00",
+        "repo_name": "czachow/qiskit-terra",
+        "additions": 9648537,
+        "deletions": 62,
+        "files_changed": 57,
+        "commit_hash": "3458d14cf7f477806eafb1d26b030f8adf0dbd20",
+        "subject": "added data on runs and improved on small errors",
+        "total_changes": 9648599
+      },
+      {
+        "date": "2024-08-25T10:51:49+00:00",
+        "repo_name": "Multiklife/UnifiedObserverLib",
+        "additions": 9625795,
+        "deletions": 50,
+        "files_changed": 124235,
+        "commit_hash": "c9c3c89035444c8202c7f9968cb98781d6e95485",
+        "subject": "Initial commit of UnifiedObserverLib",
+        "total_changes": 9625845
+      },
+      {
+        "date": "2023-12-23T13:13:54+00:00",
+        "repo_name": "junyeeeeeeeeee/Quela_Qblox",
+        "additions": 1382,
+        "deletions": 8150145,
+        "files_changed": 4017,
+        "commit_hash": "ebb7b8bacd57f6fb3d11601ea4221223a20f94ec",
+        "subject": "5q tune up continuing",
+        "total_changes": 8151527
+      },
+      {
+        "date": "2024-01-31T15:18:20+00:00",
+        "repo_name": "henryzou50/qiskit",
+        "additions": 7883240,
+        "deletions": 0,
+        "files_changed": 1039,
+        "commit_hash": "f87eccea2f67751874211683b69993c11a64b136",
+        "subject": "Added more circuits",
+        "total_changes": 7883240
+      },
+      {
+        "date": "2017-12-07T02:21:20+00:00",
+        "repo_name": "singular-value/ScaffCC",
+        "additions": 7000061,
+        "deletions": 669648,
+        "files_changed": 80763,
+        "commit_hash": "69598ddb964e50289ddf74261ecbe687db7f72cf",
+        "subject": "Migrated to LLVM 6.0",
+        "total_changes": 7669709
+      },
+      {
+        "date": "2023-01-11T21:27:15+00:00",
+        "repo_name": "pnnl/NWQ-Sim",
+        "additions": 7532719,
+        "deletions": 97,
+        "files_changed": 147,
+        "commit_hash": "49bc8e7c95e120d62f96cfc12a908b9dea71e63a",
+        "subject": "benchmarks with basis gates added",
+        "total_changes": 7532816
+      },
+      {
+        "date": "2024-06-14T14:17:32+00:00",
+        "repo_name": "NEASQC/WP6_QNLP",
+        "additions": 7438734,
+        "deletions": 0,
+        "files_changed": 665,
+        "commit_hash": "c4f8b72c3395c5e414174e1f2a372a9c5b48b51d",
+        "subject": "Adds preliminary experiment results (cross-val) except beta2 and beta3.",
+        "total_changes": 7438734
+      },
+      {
+        "date": "2024-02-03T01:44:19+00:00",
+        "repo_name": "evlachos93/SQuADDS",
+        "additions": 0,
+        "deletions": 7179035,
+        "files_changed": 1981,
+        "commit_hash": "48178e2a9161a5bf9a19ae0a6f07791e5a41711c",
+        "subject": "Added function to calculate chi, full dispersive shift of the cavity",
+        "total_changes": 7179035
+      },
+      {
+        "date": "2024-08-13T04:19:43+00:00",
+        "repo_name": "LFL-Lab/SQuADDS",
+        "additions": 51284,
+        "deletions": 7109682,
+        "files_changed": 1867,
+        "commit_hash": "2187f899c77dfe8ad9245c9d3983227ff715aabb",
+        "subject": "Feature half wave cavity (#18)",
+        "total_changes": 7160966
+      },
+      {
+        "date": "2024-07-08T08:09:57+00:00",
+        "repo_name": "andrekuo/SQuADDS",
+        "additions": 1763,
+        "deletions": 7110341,
+        "files_changed": 1823,
+        "commit_hash": "adab3f13f05e771f11c08c4f39e320397ec96106",
+        "subject": "fixed two holes",
+        "total_changes": 7112104
+      },
+      {
+        "date": "2024-05-30T19:25:44+00:00",
+        "repo_name": "LFL-Lab/SQuADDS",
+        "additions": 278,
+        "deletions": 7109179,
+        "files_changed": 1817,
+        "commit_hash": "6652c02dbf918df79a5196355cc3485f4a6a1e0c",
+        "subject": "deleted bloated build docs + added palace installation guide + **untested and unfinished interpolation code**",
+        "total_changes": 7109457
+      },
+      {
+        "date": "2024-03-14T15:23:54+00:00",
+        "repo_name": "Bogfoot/PhDCode",
+        "additions": 7005128,
+        "deletions": 561,
+        "files_changed": 83,
+        "commit_hash": "98ed9ebd47c95296068f9c8d106c03aee1ba96cf",
+        "subject": "upd",
+        "total_changes": 7005689
+      },
+      {
+        "date": "2023-11-23T15:21:20+00:00",
+        "repo_name": "lsschmid/mqt-qmap",
+        "additions": 6982749,
+        "deletions": 0,
+        "files_changed": 1255,
+        "commit_hash": "d3ef7d203380aabbd802cd6d86d4e33cde5581a5",
+        "subject": "Added evaluation data and output.",
+        "total_changes": 6982749
+      },
+      {
+        "date": "2024-01-31T19:04:12+00:00",
+        "repo_name": "henryzou50/qiskit",
+        "additions": 3256,
+        "deletions": 6507313,
+        "files_changed": 447,
+        "commit_hash": "61131cd4998522d97a7467504ca4786f4c8e0683",
+        "subject": "Paused experiment",
+        "total_changes": 6510569
+      },
+      {
+        "date": "2019-11-15T15:21:16+00:00",
+        "repo_name": "Astlaan/OpenQL",
+        "additions": 6417970,
+        "deletions": 0,
+        "files_changed": 1347,
+        "commit_hash": "3fe737b7c78d6bf93107a2d5647762deb534dfd4",
+        "subject": "Optimize='yes' debug hunt",
+        "total_changes": 6417970
+      },
+      {
+        "date": "2024-04-02T16:51:22+00:00",
+        "repo_name": "daehiff/pauliopt",
+        "additions": 6153600,
+        "deletions": 0,
+        "files_changed": 8801,
+        "commit_hash": "7915ded20f2a79aefab86a34627404ff564e1e5a",
+        "subject": "Add fixed dataset from previous paper",
+        "total_changes": 6153600
+      },
+      {
+        "date": "2023-12-31T21:13:06+00:00",
+        "repo_name": "LFL-Lab/SQuADDS",
+        "additions": 5742778,
+        "deletions": 1628,
+        "files_changed": 1283,
+        "commit_hash": "77b82f49dc5a0e0e6a975fe4e0a35686afcb0b24",
+        "subject": "with new build dirs + updated conf.py",
+        "total_changes": 5744406
+      },
+      {
+        "date": "2024-03-08T06:48:54+00:00",
+        "repo_name": "junyeeeeeeeeee/Quela_Qblox",
+        "additions": 0,
+        "deletions": 5536683,
+        "files_changed": 3521,
+        "commit_hash": "221098fdec50e64f99a617df01e5f5e26365960f",
+        "subject": "Delete .data directory",
+        "total_changes": 5536683
+      },
+      {
+        "date": "2023-12-27T11:36:11+00:00",
+        "repo_name": "junyeeeeeeeeee/Quela_Qblox",
+        "additions": 5490579,
+        "deletions": 465,
+        "files_changed": 3149,
+        "commit_hash": "ec7b39e0640e5aa6edfeab73960a68ff40543918",
+        "subject": "pulse-preview test",
+        "total_changes": 5491044
+      },
+      {
+        "date": "2024-02-26T02:22:21+00:00",
+        "repo_name": "junyeeeeeeeeee/Quela_Qblox",
+        "additions": 0,
+        "deletions": 5387869,
+        "files_changed": 3917,
+        "commit_hash": "9e292b5716e01f4b1365e940897a63eff346b03b",
+        "subject": "clean up",
+        "total_changes": 5387869
+      },
+      {
+        "date": "2022-09-30T10:26:36+00:00",
+        "repo_name": "TheGupta2012/QickStart",
+        "additions": 5158516,
+        "deletions": 0,
+        "files_changed": 21,
+        "commit_hash": "c5463ced37a043a93d211141ca86e2ff042d5fb4",
+        "subject": "Problem-3 task-2 testcases",
+        "total_changes": 5158516
+      },
+      {
+        "date": "2019-11-25T14:33:46+00:00",
+        "repo_name": "Astlaan/OpenQL",
+        "additions": 75101,
+        "deletions": 4902693,
+        "files_changed": 1651,
+        "commit_hash": "7de5778b02f45ea2f9b36fc4c59e209b1bdaff2b",
+        "subject": "Modified test_file location scheme",
+        "total_changes": 4977794
+      },
+      {
+        "date": "2020-02-11T09:27:16+00:00",
+        "repo_name": "QE-Lab/OpenQL",
+        "additions": 0,
+        "deletions": 4903479,
+        "files_changed": 979,
+        "commit_hash": "3cf2a718a5c760ecb8aec4aae9bf429e78fe190d",
+        "subject": "Deleted tools",
+        "total_changes": 4903479
+      },
+      {
+        "date": "2023-03-24T06:00:50+00:00",
+        "repo_name": "Sudhir878786/QML-HEP-GSoC-2023-Tasks",
+        "additions": 4851530,
+        "deletions": 0,
+        "files_changed": 54719,
+        "commit_hash": "9104dabb8d5b94eff37217f3b82009c488c2cab9",
+        "subject": "TaskVIII completed",
+        "total_changes": 4851530
+      },
+      {
+        "date": "2023-03-12T18:04:54+00:00",
+        "repo_name": "Sudhir878786/QML-HEP-GSoC-2023-Tasks",
+        "additions": 4845001,
+        "deletions": 0,
+        "files_changed": 54613,
+        "commit_hash": "14cfd3975c98aa07fd06a3bf01149e116ad1e756",
+        "subject": "Completed first Task",
+        "total_changes": 4845001
+      },
+      {
+        "date": "2024-01-31T01:35:37+00:00",
+        "repo_name": "henryzou50/qiskit",
+        "additions": 4803850,
+        "deletions": 0,
+        "files_changed": 1801,
+        "commit_hash": "9b04037e74ab48838ddfd71b3169832aabdf877d",
+        "subject": "Added circuits from red queen",
+        "total_changes": 4803850
+      },
+      {
+        "date": "2024-01-31T05:31:14+00:00",
+        "repo_name": "henryzou50/qiskit",
+        "additions": 542,
+        "deletions": 4570030,
+        "files_changed": 725,
+        "commit_hash": "bdfd27730ea4305aeceead49ff29140755cc5bfe",
+        "subject": "Added results for BIGD and BNTF",
+        "total_changes": 4570572
+      },
+      {
+        "date": "2024-06-26T03:22:59+00:00",
+        "repo_name": "HydroXCarbon/HybridQuantumGAN",
+        "additions": 4524405,
+        "deletions": 0,
+        "files_changed": 51331,
+        "commit_hash": "fc1eba3e52cc1a08af947e64099e9e2e7c5827b7",
+        "subject": "Ignore env folder",
+        "total_changes": 4524405
+      },
+      {
+        "date": "2024-06-26T03:26:44+00:00",
+        "repo_name": "HydroXCarbon/HybridQuantumGAN",
+        "additions": 1,
+        "deletions": 4523559,
+        "files_changed": 51319,
+        "commit_hash": "defea29c52853eba918ad79bf1b50c9b3dd4e79c",
+        "subject": "Remove envs folder from tracking",
+        "total_changes": 4523560
+      },
+      {
+        "date": "2024-01-31T16:21:16+00:00",
+        "repo_name": "System-Verification-Lab/Quokka-Sharp",
+        "additions": 2760,
+        "deletions": 4430265,
+        "files_changed": 193,
+        "commit_hash": "f94a45a54fec5841f7c89e9c9a2397c432bf620f",
+        "subject": "bench",
+        "total_changes": 4433025
+      },
+      {
+        "date": "2021-01-16T22:44:20+00:00",
+        "repo_name": "AndrewOriani/Automated-RF-Design-Demo-MASTER",
+        "additions": 4370821,
+        "deletions": 0,
+        "files_changed": 209,
+        "commit_hash": "9cd784c799010b8806caeb03b4ae2b47763b3122",
+        "subject": "Initial commit of cavity demos",
+        "total_changes": 4370821
+      },
+      {
+        "date": "2016-06-29T18:23:33+00:00",
+        "repo_name": "epiqc/ScaffCC",
+        "additions": 2162705,
+        "deletions": 2160131,
+        "files_changed": 59,
+        "commit_hash": "02bf4627a6ac232b5f3de00f91fbe9a748390d21",
+        "subject": "gen-lpfs.sh script, and other script modifications",
+        "total_changes": 4322836
+      },
+      {
+        "date": "2016-05-27T19:13:39+00:00",
+        "repo_name": "epiqc/ScaffCC",
+        "additions": 2159928,
+        "deletions": 2159666,
+        "files_changed": 25,
+        "commit_hash": "d1d80976ae6584490ccd8ebe7a6dd0dd93ec23f6",
+        "subject": "Slight modifications to scripts",
+        "total_changes": 4319594
+      },
+      {
+        "date": "2018-07-23T16:13:16+00:00",
+        "repo_name": "epiqc/ScaffCC",
+        "additions": 2156145,
+        "deletions": 2133463,
+        "files_changed": 151,
+        "commit_hash": "8f20fcdf3d6626842b0772fe8e088da35dfaebea",
+        "subject": "New Changes",
+        "total_changes": 4289608
+      },
+      {
+        "date": "2016-08-20T18:26:05+00:00",
+        "repo_name": "epiqc/ScaffCC",
+        "additions": 2099026,
+        "deletions": 2158998,
+        "files_changed": 13,
+        "commit_hash": "d32a20f50efef382439dede3f2c1f8cbceab27b4",
+        "subject": "Fixed file format discrepancy between full lpfs schedules and full cg schedules",
+        "total_changes": 4258024
+      },
+      {
+        "date": "2018-07-23T16:52:17+00:00",
+        "repo_name": "epiqc/ScaffCC",
+        "additions": 2123060,
+        "deletions": 2121824,
+        "files_changed": 69,
+        "commit_hash": "0956fdb3038aed2de4aeee2983d1e932a38e9177",
+        "subject": "Migrating algorithms directory",
+        "total_changes": 4244884
+      },
+      {
+        "date": "2018-06-20T16:48:11+00:00",
+        "repo_name": "epiqc/ScaffCC",
+        "additions": 2098213,
+        "deletions": 2098213,
+        "files_changed": 3,
+        "commit_hash": "34c3a53fd953cb1eed300b759eaf3e2da2eea33b",
+        "subject": "class number CNOT fix",
+        "total_changes": 4196426
+      },
+      {
+        "date": "2024-03-08T10:02:07+00:00",
+        "repo_name": "junyeeeeeeeeee/Quela_Qblox",
+        "additions": 4045444,
+        "deletions": 324,
+        "files_changed": 1199,
+        "commit_hash": "7702232649eda50f87fd94b8845be0580fe5ef0f",
+        "subject": "push",
+        "total_changes": 4045768
+      },
+      {
+        "date": "2024-09-03T15:19:51+00:00",
+        "repo_name": "LSHerzog/mqt-qsim-joint-cutting",
+        "additions": 4029032,
+        "deletions": 2,
+        "files_changed": 143,
+        "commit_hash": "4391361264a46f896e79d3290c0b5437835d443e",
+        "subject": ":construction: added benchmarks and utiltiy functions but need to be tidied up",
+        "total_changes": 4029034
+      },
+      {
+        "date": "2022-02-25T14:44:51+00:00",
+        "repo_name": "cda-tum/mqt-qusat",
+        "additions": 3973038,
+        "deletions": 3,
+        "files_changed": 4037,
+        "commit_hash": "8b1f702f1b493816fcdafbeaa59f22253f6dad3e",
+        "subject": "init commit",
+        "total_changes": 3973041
+      },
+      {
+        "date": "2024-09-26T09:51:56+00:00",
+        "repo_name": "Bogfoot/PhDCode",
+        "additions": 3966315,
+        "deletions": 2,
+        "files_changed": 47,
+        "commit_hash": "8df48820379e1f5db5402a4d390a7ac7e0921633",
+        "subject": "upd",
+        "total_changes": 3966317
+      },
+      {
+        "date": "2024-07-10T02:23:15+00:00",
+        "repo_name": "ichuang/pyqsp",
+        "additions": 3768113,
+        "deletions": 3,
+        "files_changed": 22987,
+        "commit_hash": "26777826c742f828d6e76d97ce71762aa22c45f3",
+        "subject": "Light edits and design doc for L-BFGS.",
+        "total_changes": 3768116
+      },
+      {
+        "date": "2024-07-10T02:29:49+00:00",
+        "repo_name": "ichuang/pyqsp",
+        "additions": 3,
+        "deletions": 3767995,
+        "files_changed": 22979,
+        "commit_hash": "4aa05da1fd5b416da908fb48806c94529bef105c",
+        "subject": "Ignore qsp/ venv.",
+        "total_changes": 3767998
+      },
+      {
+        "date": "2024-09-30T04:22:42+00:00",
+        "repo_name": "kechen666/google_qec_3_experiment",
+        "additions": 3649504,
+        "deletions": 1,
+        "files_changed": 427,
+        "commit_hash": "2a34e793fb28d925cc98ba8eb23c215e9a1e379b",
+        "subject": "chore(surface code data): Add d=3, r=1-15 data and d=5, 1-15.",
+        "total_changes": 3649505
+      },
+      {
+        "date": "2019-04-05T21:36:14+00:00",
+        "repo_name": "epiqc/PartialCompilation",
+        "additions": 3601380,
+        "deletions": 0,
+        "files_changed": 3435,
+        "commit_hash": "0ff702c85380322b979c4cb2519427a785b2d76b",
+        "subject": "Experimental results for QAOA 3 Regular",
+        "total_changes": 3601380
+      },
+      {
+        "date": "2022-05-13T08:42:53+00:00",
+        "repo_name": "nylewong/mitiq",
+        "additions": 3471488,
+        "deletions": 0,
+        "files_changed": 22049,
+        "commit_hash": "68b160f5c0b7e99a59dafb32bf131da24f326685",
+        "subject": "env",
+        "total_changes": 3471488
+      },
+      {
+        "date": "2022-05-27T08:40:11+00:00",
+        "repo_name": "nylewong/mitiq",
+        "additions": 0,
+        "deletions": 3471488,
+        "files_changed": 22049,
+        "commit_hash": "a9dbcd2f3e11c2b871499208bcdb0f13456167b8",
+        "subject": "removed env files",
+        "total_changes": 3471488
+      },
+      {
+        "date": "2024-02-09T19:25:26+00:00",
+        "repo_name": "evlachos93/SQuADDS",
+        "additions": 3469676,
+        "deletions": 0,
+        "files_changed": 1073,
+        "commit_hash": "fdddc719a25f92d14f83b011e9b6614e95215686",
+        "subject": "Included method in simulator class to handle geometry sweeps of the whole device (qubit+resonator)",
+        "total_changes": 3469676
+      },
+      {
+        "date": "2019-11-21T20:57:05+00:00",
+        "repo_name": "vtomole/Cirq",
+        "additions": 3462556,
+        "deletions": 0,
+        "files_changed": 25649,
+        "commit_hash": "8ce4d348750f040324cc50ca86b58d9d1ba3ca54",
+        "subject": "For now",
+        "total_changes": 3462556
+      },
+      {
+        "date": "2019-11-21T20:58:40+00:00",
+        "repo_name": "vtomole/Cirq",
+        "additions": 0,
+        "deletions": 3462026,
+        "files_changed": 25615,
+        "commit_hash": "121ee0169e38aec7b3db297efd7888c058b332d7",
+        "subject": "Remove venv",
+        "total_changes": 3462026
+      },
+      {
+        "date": "2023-10-03T02:58:36+00:00",
+        "repo_name": "zapatacomputing/benchq",
+        "additions": 3431228,
+        "deletions": 86,
+        "files_changed": 109,
+        "commit_hash": "0508efe4b6032249f9b75d40bf62eda647d80705",
+        "subject": "feat: everything needed to benchmark",
+        "total_changes": 3431314
+      },
+      {
+        "date": "2019-11-10T16:45:45+00:00",
+        "repo_name": "QE-Lab/OpenQL",
+        "additions": 3387566,
+        "deletions": 30,
+        "files_changed": 609,
+        "commit_hash": "33458303279b716a66fff8837fc028d7ca4a1a37",
+        "subject": "Compiler validator testing part 1",
+        "total_changes": 3387596
+      },
+      {
+        "date": "2023-01-09T17:39:00+00:00",
+        "repo_name": "pnnl/NWQ-Sim",
+        "additions": 3322395,
+        "deletions": 1999,
+        "files_changed": 917,
+        "commit_hash": "c8b52fe5fea1a68f4f78d4265c3f933c0afed04d",
+        "subject": "add dmsim",
+        "total_changes": 3324394
+      },
+      {
+        "date": "2020-02-17T14:49:25+00:00",
+        "repo_name": "cda-tum/mqt-qmap",
+        "additions": 3318778,
+        "deletions": 3,
+        "files_changed": 369,
+        "commit_hash": "555b11e76df6c16c512727ced0542a10a54a5084",
+        "subject": "initial update",
+        "total_changes": 3318781
+      },
+      {
+        "date": "2022-04-21T15:18:29+00:00",
+        "repo_name": "czachow/qiskit-terra",
+        "additions": 3314043,
+        "deletions": 551,
+        "files_changed": 387,
+        "commit_hash": "b321f40030aa2039babcad0846bc46c5502256e5",
+        "subject": "worked on new benchmark problems",
+        "total_changes": 3314594
+      },
+      {
+        "date": "2022-02-28T13:37:02+00:00",
+        "repo_name": "cda-tum/mqt-qusat",
+        "additions": 0,
+        "deletions": 3313726,
+        "files_changed": 329,
+        "commit_hash": "726a01c1a1a5713a4df26313ea88148393a69045",
+        "subject": "\ud83d\udd25 remove examples directory",
+        "total_changes": 3313726
+      },
+      {
+        "date": "2021-06-24T10:07:59+00:00",
+        "repo_name": "boschmitt/tweedledum",
+        "additions": 3313199,
+        "deletions": 0,
+        "files_changed": 317,
+        "commit_hash": "dcd6f5b78d4733093b841c2fc42adf6458b7e4f7",
+        "subject": "Add qasm circuits",
+        "total_changes": 3313199
+      },
+      {
+        "date": "2023-11-10T14:05:54+00:00",
+        "repo_name": "oqc-community/qat",
+        "additions": 9,
+        "deletions": 3189048,
+        "files_changed": 377,
+        "commit_hash": "dd197a34f9badfccb6edc2e53df5b6987005580f",
+        "subject": "added gh-pages branch for sphinx docs",
+        "total_changes": 3189057
+      },
+      {
+        "date": "2023-11-10T14:03:02+00:00",
+        "repo_name": "oqc-community/qat",
+        "additions": 3189048,
+        "deletions": 0,
+        "files_changed": 377,
+        "commit_hash": "4248c2a470db2ea4cf3354478d9391a45e96877a",
+        "subject": "Disable Jekyll",
+        "total_changes": 3189048
+      },
+      {
+        "date": "2022-11-18T12:48:33+00:00",
+        "repo_name": "ewanmurphy/pyzx",
+        "additions": 3019305,
+        "deletions": 0,
+        "files_changed": 24695,
+        "commit_hash": "e51df20338cb54449c5c867c66bf2b1fe3fe57b8",
+        "subject": "Added steiner circuits",
+        "total_changes": 3019305
+      },
+      {
+        "date": "2023-12-20T12:09:20+00:00",
+        "repo_name": "junyeeeeeeeeee/Quela_Qblox",
+        "additions": 3009922,
+        "deletions": 120,
+        "files_changed": 1167,
+        "commit_hash": "87fb1affb996ac9ab180d2bb1e6ff6acfb6abcd9",
+        "subject": "managed measFlow to test",
+        "total_changes": 3010042
+      },
+      {
+        "date": "2022-02-18T14:36:19+00:00",
+        "repo_name": "sorewachigauyo/qibolab",
+        "additions": 2945716,
+        "deletions": 10837,
+        "files_changed": 4739,
+        "commit_hash": "0e429743383a344591ec2aa1fef806e71b6116f4",
+        "subject": "no_data",
+        "total_changes": 2956553
+      },
+      {
+        "date": "2022-02-18T14:38:18+00:00",
+        "repo_name": "sorewachigauyo/qibolab",
+        "additions": 569,
+        "deletions": 2943925,
+        "files_changed": 4733,
+        "commit_hash": "d279d6eb0bb4ca176c39cd1e74a5389837fe4457",
+        "subject": "yifei_echo_nodata",
+        "total_changes": 2944494
+      },
+      {
+        "date": "2023-12-22T09:36:19+00:00",
+        "repo_name": "junyeeeeeeeeee/Quela_Qblox",
+        "additions": 2940107,
+        "deletions": 477,
+        "files_changed": 1663,
+        "commit_hash": "d79b8180e8611615a97757547031c9582409c177",
+        "subject": "5q tune up test",
+        "total_changes": 2940584
+      },
+      {
+        "date": "2020-09-12T05:06:06+00:00",
+        "repo_name": "sedeagu/quisp",
+        "additions": 2883272,
+        "deletions": 8622,
+        "files_changed": 4355,
+        "commit_hash": "7879b48f8764b16a1191f2c50af76190291f5368",
+        "subject": "Revert \"Merge branch 'master' of https://github.com/sfc-aqua/quisp\"",
+        "total_changes": 2891894
+      },
+      {
+        "date": "2020-09-12T05:06:06+00:00",
+        "repo_name": "sgangoly/quisp",
+        "additions": 2883272,
+        "deletions": 8622,
+        "files_changed": 4355,
+        "commit_hash": "7879b48f8764b16a1191f2c50af76190291f5368",
+        "subject": "Revert \"Merge branch 'master' of https://github.com/sfc-aqua/quisp\"",
+        "total_changes": 2891894
+      },
+      {
+        "date": "2020-09-12T05:06:06+00:00",
+        "repo_name": "Shahip2016/quisp",
+        "additions": 2883272,
+        "deletions": 8622,
+        "files_changed": 4355,
+        "commit_hash": "7879b48f8764b16a1191f2c50af76190291f5368",
+        "subject": "Revert \"Merge branch 'master' of https://github.com/sfc-aqua/quisp\"",
+        "total_changes": 2891894
+      },
+      {
+        "date": "2020-09-12T05:06:06+00:00",
+        "repo_name": "RobSeSa/quisp",
+        "additions": 2883272,
+        "deletions": 8622,
+        "files_changed": 4355,
+        "commit_hash": "7879b48f8764b16a1191f2c50af76190291f5368",
+        "subject": "Revert \"Merge branch 'master' of https://github.com/sfc-aqua/quisp\"",
+        "total_changes": 2891894
+      },
+      {
+        "date": "2020-09-12T05:06:06+00:00",
+        "repo_name": "ngym/quisp",
+        "additions": 2883272,
+        "deletions": 8622,
+        "files_changed": 4355,
+        "commit_hash": "7879b48f8764b16a1191f2c50af76190291f5368",
+        "subject": "Revert \"Merge branch 'master' of https://github.com/sfc-aqua/quisp\"",
+        "total_changes": 2891894
+      },
+      {
+        "date": "2020-09-12T05:06:06+00:00",
+        "repo_name": "TSarkar99/quisp",
+        "additions": 2883272,
+        "deletions": 8622,
+        "files_changed": 4355,
+        "commit_hash": "7879b48f8764b16a1191f2c50af76190291f5368",
+        "subject": "Revert \"Merge branch 'master' of https://github.com/sfc-aqua/quisp\"",
+        "total_changes": 2891894
+      },
+      {
+        "date": "2020-09-12T05:06:06+00:00",
+        "repo_name": "cmeignan/quisp",
+        "additions": 2883272,
+        "deletions": 8622,
+        "files_changed": 4355,
+        "commit_hash": "7879b48f8764b16a1191f2c50af76190291f5368",
+        "subject": "Revert \"Merge branch 'master' of https://github.com/sfc-aqua/quisp\"",
+        "total_changes": 2891894
+      },
+      {
+        "date": "2020-09-12T05:06:06+00:00",
+        "repo_name": "zsy817/quisp",
+        "additions": 2883272,
+        "deletions": 8622,
+        "files_changed": 4355,
+        "commit_hash": "7879b48f8764b16a1191f2c50af76190291f5368",
+        "subject": "Revert \"Merge branch 'master' of https://github.com/sfc-aqua/quisp\"",
+        "total_changes": 2891894
+      },
+      {
+        "date": "2020-04-18T08:50:25+00:00",
+        "repo_name": "sfc-aqua/quisp",
+        "additions": 0,
+        "deletions": 2875164,
+        "files_changed": 4211,
+        "commit_hash": "ecd06fd3911693f27a25e7c3c024894ed5d1a8f0",
+        "subject": "add ignore rule for simulation output",
+        "total_changes": 2875164
+      }
+    ]
+  }
+}

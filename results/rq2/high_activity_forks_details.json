@@ -1,0 +1,534 @@
+{
+  "cda-tum/mqt-core": [
+    {
+      "fork_name": "pichristoph/qfr",
+      "metrics": {
+        "commit_count": 264
+      },
+      "analysis": {
+        "threshold": 226,
+        "percentile": 99
+      }
+    }
+  ],
+  "Quandela/Perceval": [
+    {
+      "fork_name": "julienCALISTO/Perceval",
+      "metrics": {
+        "commit_count": 348
+      },
+      "analysis": {
+        "threshold": 280,
+        "percentile": 99
+      }
+    }
+  ],
+  "qua-platform/qua-libs": [
+    {
+      "fork_name": "berk-qm/qua-libs",
+      "metrics": {
+        "commit_count": 358
+      },
+      "analysis": {
+        "threshold": 357,
+        "percentile": 99
+      }
+    }
+  ],
+  "Qiskit/qiskit": [
+    {
+      "fork_name": "1ucian0/qiskit-terra",
+      "metrics": {
+        "commit_count": 2822
+      },
+      "analysis": {
+        "threshold": 2246,
+        "percentile": 99
+      }
+    }
+  ],
+  "m-labs/artiq": [
+    {
+      "fork_name": "HaeffnerLab/artiq",
+      "metrics": {
+        "commit_count": 1962
+      },
+      "analysis": {
+        "threshold": 649,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "HarryMakes/artiq",
+      "metrics": {
+        "commit_count": 844
+      },
+      "analysis": {
+        "threshold": 649,
+        "percentile": 99
+      }
+    }
+  ],
+  "BQSKit/bqskit": [
+    {
+      "fork_name": "jkalloor3/bqskit",
+      "metrics": {
+        "commit_count": 338
+      },
+      "analysis": {
+        "threshold": 320,
+        "percentile": 99
+      }
+    }
+  ],
+  "q-optimize/c3": [
+    {
+      "fork_name": "alex-simm/c3",
+      "metrics": {
+        "commit_count": 325
+      },
+      "analysis": {
+        "threshold": 304,
+        "percentile": 99
+      }
+    }
+  ],
+  "PennyLaneAI/catalyst": [
+    {
+      "fork_name": "Spencer-Comin/catalyst",
+      "metrics": {
+        "commit_count": 534
+      },
+      "analysis": {
+        "threshold": 509,
+        "percentile": 99
+      }
+    }
+  ],
+  "quantumlib/Cirq": [
+    {
+      "fork_name": "dstrain115/Cirq-1",
+      "metrics": {
+        "commit_count": 1021
+      },
+      "analysis": {
+        "threshold": 365,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "vtomole/Cirq",
+      "metrics": {
+        "commit_count": 407
+      },
+      "analysis": {
+        "threshold": 365,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "balopat/Cirq",
+      "metrics": {
+        "commit_count": 1201
+      },
+      "analysis": {
+        "threshold": 365,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "MichaelBroughton/Cirq",
+      "metrics": {
+        "commit_count": 399
+      },
+      "analysis": {
+        "threshold": 365,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "verult/Cirq",
+      "metrics": {
+        "commit_count": 385
+      },
+      "analysis": {
+        "threshold": 365,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "tanujkhattar/Cirq",
+      "metrics": {
+        "commit_count": 565
+      },
+      "analysis": {
+        "threshold": 365,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "95-martin-orion/Cirq",
+      "metrics": {
+        "commit_count": 431
+      },
+      "analysis": {
+        "threshold": 365,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "mpharrigan/Cirq",
+      "metrics": {
+        "commit_count": 464
+      },
+      "analysis": {
+        "threshold": 365,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "rht/Cirq",
+      "metrics": {
+        "commit_count": 1234
+      },
+      "analysis": {
+        "threshold": 365,
+        "percentile": 99
+      }
+    }
+  ],
+  "AgnostiqHQ/covalent": [
+    {
+      "fork_name": "bgriffen/covalent",
+      "metrics": {
+        "commit_count": 136
+      },
+      "analysis": {
+        "threshold": 131,
+        "percentile": 99
+      }
+    }
+  ],
+  "iic-jku/ddsim": [
+    {
+      "fork_name": "00mjk/ddsim",
+      "metrics": {
+        "commit_count": 193
+      },
+      "analysis": {
+        "threshold": 186,
+        "percentile": 99
+      }
+    }
+  ],
+  "discopy/discopy": [
+    {
+      "fork_name": "le-big-mac/discopy",
+      "metrics": {
+        "commit_count": 181
+      },
+      "analysis": {
+        "threshold": 179,
+        "percentile": 99
+      }
+    }
+  ],
+  "mindsdb/lightwood": [
+    {
+      "fork_name": "maximlopin/lightwood",
+      "metrics": {
+        "commit_count": 163
+      },
+      "analysis": {
+        "threshold": 162,
+        "percentile": 99
+      }
+    }
+  ],
+  "unitaryfund/mitiq": [
+    {
+      "fork_name": "JulioLarrea/mitiq",
+      "metrics": {
+        "commit_count": 335
+      },
+      "analysis": {
+        "threshold": 329,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "RishabGhosh98/mitiq",
+      "metrics": {
+        "commit_count": 340
+      },
+      "analysis": {
+        "threshold": 329,
+        "percentile": 99
+      }
+    }
+  ],
+  "PennyLaneAI/pennylane": [
+    {
+      "fork_name": "AlbertMitjans/pennylane",
+      "metrics": {
+        "commit_count": 2389
+      },
+      "analysis": {
+        "threshold": 2358,
+        "percentile": 99
+      }
+    }
+  ],
+  "Qiskit/qiskit-ibm-runtime": [
+    {
+      "fork_name": "beckykd/qiskit-ibm-runtime",
+      "metrics": {
+        "commit_count": 449
+      },
+      "analysis": {
+        "threshold": 369,
+        "percentile": 99
+      }
+    }
+  ],
+  "qiskit/qiskit-ignis": [
+    {
+      "fork_name": "ShellyGarion/qiskit-ignis",
+      "metrics": {
+        "commit_count": 428
+      },
+      "analysis": {
+        "threshold": 317,
+        "percentile": 99
+      }
+    }
+  ],
+  "quantumlib/qsim": [
+    {
+      "fork_name": "laurynasas/qsim",
+      "metrics": {
+        "commit_count": 400
+      },
+      "analysis": {
+        "threshold": 268,
+        "percentile": 99
+      }
+    }
+  ],
+  "Strilanc/Quirk": [
+    {
+      "fork_name": "qi-rub/Quirky",
+      "metrics": {
+        "commit_count": 101
+      },
+      "analysis": {
+        "threshold": 89,
+        "percentile": 99
+      }
+    }
+  ],
+  "QuantumBFS/Yao.jl": [
+    {
+      "fork_name": "thautwarm/Yao.jl",
+      "metrics": {
+        "commit_count": 104
+      },
+      "analysis": {
+        "threshold": 100,
+        "percentile": 99
+      }
+    }
+  ],
+  "Microsoft/QuantumKatas": [
+    {
+      "fork_name": "Gartank/QuantumKatas",
+      "metrics": {
+        "commit_count": 10413
+      },
+      "analysis": {
+        "threshold": 10408,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "battyone/QuantumKatas",
+      "metrics": {
+        "commit_count": 10978
+      },
+      "analysis": {
+        "threshold": 10408,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "joanaw/QuantumKatas",
+      "metrics": {
+        "commit_count": 10924
+      },
+      "analysis": {
+        "threshold": 10408,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "Avhijit-Nair/QuantumKatas",
+      "metrics": {
+        "commit_count": 10467
+      },
+      "analysis": {
+        "threshold": 10408,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "carasue/QuantumKatas",
+      "metrics": {
+        "commit_count": 10775
+      },
+      "analysis": {
+        "threshold": 10408,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "FermiQ/QuantumKatas",
+      "metrics": {
+        "commit_count": 10410
+      },
+      "analysis": {
+        "threshold": 10408,
+        "percentile": 99
+      }
+    },
+    {
+      "fork_name": "FreeworkEarth/QuantumKatas",
+      "metrics": {
+        "commit_count": 10584
+      },
+      "analysis": {
+        "threshold": 10408,
+        "percentile": 99
+      }
+    }
+  ],
+  "hashberg-io/pauliopt": [
+    {
+      "fork_name": "daehiff/pauliopt",
+      "metrics": {
+        "commit_count": 237
+      },
+      "analysis": {
+        "threshold": 230,
+        "percentile": 99
+      }
+    }
+  ],
+  "qiboteam/qibocal": [
+    {
+      "fork_name": "aorgazf/qibocal",
+      "metrics": {
+        "commit_count": 377
+      },
+      "analysis": {
+        "threshold": 364,
+        "percentile": 99
+      }
+    }
+  ],
+  "arthurostrauss/Quantum_Optimal_Control": [
+    {
+      "fork_name": "lukasvoss/Quantum_Optimal_Control",
+      "metrics": {
+        "commit_count": 95
+      },
+      "analysis": {
+        "threshold": 94,
+        "percentile": 99
+      }
+    }
+  ],
+  "qiskit-community/ffsim": [
+    {
+      "fork_name": "kevinsung/ffsim",
+      "metrics": {
+        "commit_count": 507
+      },
+      "analysis": {
+        "threshold": 488,
+        "percentile": 99
+      }
+    }
+  ],
+  "HQSquantumsimulations/qoqo-qiskit": [
+    {
+      "fork_name": "mlodi-hqs/qoqo-qiskit",
+      "metrics": {
+        "commit_count": 121
+      },
+      "analysis": {
+        "threshold": 118,
+        "percentile": 99
+      }
+    }
+  ],
+  "HQSquantumsimulations/qoqo_qasm": [
+    {
+      "fork_name": "mlodi-hqs/qoqo_qasm",
+      "metrics": {
+        "commit_count": 316
+      },
+      "analysis": {
+        "threshold": 299,
+        "percentile": 99
+      }
+    }
+  ],
+  "HQSquantumsimulations/qoqo_qryd": [
+    {
+      "fork_name": "mlodi-hqs/qoqo_qryd",
+      "metrics": {
+        "commit_count": 554
+      },
+      "analysis": {
+        "threshold": 543,
+        "percentile": 99
+      }
+    }
+  ],
+  "TuringQ/deepquantum": [
+    {
+      "fork_name": "Hugh-888/deepquantum",
+      "metrics": {
+        "commit_count": 90
+      },
+      "analysis": {
+        "threshold": 89,
+        "percentile": 99
+      }
+    }
+  ],
+  "pyRiemann/pyRiemann-qiskit": [
+    {
+      "fork_name": "gcattan/pyRiemann-qiskit",
+      "metrics": {
+        "commit_count": 1828
+      },
+      "analysis": {
+        "threshold": 1757,
+        "percentile": 99
+      }
+    }
+  ],
+  "qc-tum/qib": [
+    {
+      "fork_name": "TFphoenix/qib",
+      "metrics": {
+        "commit_count": 92
+      },
+      "analysis": {
+        "threshold": 91,
+        "percentile": 99
+      }
+    }
+  ]
+}

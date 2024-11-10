@@ -1,0 +1,77 @@
+{
+  "analysis_timestamp": "2024-11-09T18:52:28.226713",
+  "datasets": {
+    "rq1/repos.parquet": {
+      "dataset_name": "repos.parquet",
+      "size_bytes": 3269538,
+      "total_rows": 24122,
+      "total_files": 13,
+      "memory_usage": 17206021,
+      "detailed_stats": {
+        "repository_stats": {
+          "total_repositories": 24122,
+          "oldest_repo_date": "2012-01-27",
+          "oldest_repo_name": "BBN-Q/Qlab",
+          "newest_repo_date": "2024-10-15",
+          "repository_age_distribution": {
+            "min_days": 4644,
+            "avg_days": 1279,
+            "median_days": 1214
+          }
+        },
+        "popularity_metrics": {
+          "stars": {
+            "total": 78204,
+            "average": 3.242019733023796,
+            "median": 0.0,
+            "max": 5167,
+            "max_repo": "Qiskit/qiskit"
+          },
+          "forks": {
+            "total": 25503,
+            "average": 1.0572506425669512,
+            "median": 0.0,
+            "max": 2353,
+            "max_repo": "Qiskit/qiskit"
+          }
+        },
+        "size_metrics": {
+          "repository_size": {
+            "average_kb": 47710.47214161346,
+            "median_kb": 21104.5,
+            "total_gb": 1097.5570764541626,
+            "max_mb": 4748.923828125,
+            "max_repo": "System-Verification-Lab/Quokka-Sharp"
+          },
+          "code_lines": {
+            "total": 3201164485,
+            "average": 132707.25831191443,
+            "median": 21543.0,
+            "max": 467043012,
+            "max_repo": "System-Verification-Lab/Quokka-Sharp"
+          }
+        }
+      },
+      "size_human": "3.3 MB",
+      "memory_usage_human": "17.2 MB"
+    },
+    "rq2/commit_patterns": {
+      "dataset_name": "commit_patterns",
+      "size_bytes": 105332678,
+      "total_rows": 1232828,
+      "total_files": 228,
+      "memory_usage": 713591515,
+      "size_human": "105.3 MB",
+      "memory_usage_human": "713.6 MB"
+    },
+    "rq2/commit_patterns_classified": {
+      "dataset_name": "commit_patterns_classified",
+      "size_bytes": 109560157,
+      "total_rows": 1232828,
+      "total_files": 1501,
+      "memory_usage": 785411162,
+      "size_human": "109.6 MB",
+      "memory_usage_human": "785.4 MB"
+    }
+  }
+}

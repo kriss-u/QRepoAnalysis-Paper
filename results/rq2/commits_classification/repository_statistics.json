@@ -1,0 +1,148 @@
+{
+  "total": {
+    "repositories": 10791,
+    "commits": 1232828
+  },
+  "by_fork_status": {
+    "originals": {
+      "repositories": 963,
+      "commits": 390425
+    },
+    "forks": {
+      "repositories": 9828,
+      "commits": 842403
+    }
+  },
+  "by_classification": {
+    "Adaptive": {
+      "total": {
+        "repositories": 7035,
+        "commits": 167664
+      },
+      "originals": {
+        "repositories": 810,
+        "commits": 41606
+      },
+      "forks": {
+        "repositories": 6225,
+        "commits": 126058
+      }
+    },
+    "Adaptive Perfective": {
+      "total": {
+        "repositories": 4529,
+        "commits": 43922
+      },
+      "originals": {
+        "repositories": 645,
+        "commits": 9871
+      },
+      "forks": {
+        "repositories": 3884,
+        "commits": 34051
+      }
+    },
+    "Corrective": {
+      "total": {
+        "repositories": 7336,
+        "commits": 184531
+      },
+      "originals": {
+        "repositories": 724,
+        "commits": 43431
+      },
+      "forks": {
+        "repositories": 6612,
+        "commits": 141100
+      }
+    },
+    "Corrective Adaptive": {
+      "total": {
+        "repositories": 1150,
+        "commits": 2559
+      },
+      "originals": {
+        "repositories": 192,
+        "commits": 800
+      },
+      "forks": {
+        "repositories": 958,
+        "commits": 1759
+      }
+    },
+    "Corrective Adaptive Perfective": {
+      "total": {
+        "repositories": 1,
+        "commits": 1
+      },
+      "originals": {
+        "repositories": 0,
+        "commits": 0
+      },
+      "forks": {
+        "repositories": 1,
+        "commits": 1
+      }
+    },
+    "Corrective Perfective": {
+      "total": {
+        "repositories": 2090,
+        "commits": 9015
+      },
+      "originals": {
+        "repositories": 367,
+        "commits": 2145
+      },
+      "forks": {
+        "repositories": 1723,
+        "commits": 6870
+      }
+    },
+    "Perfective": {
+      "total": {
+        "repositories": 9370,
+        "commits": 485355
+      },
+      "originals": {
+        "repositories": 948,
+        "commits": 112442
+      },
+      "forks": {
+        "repositories": 8422,
+        "commits": 372913
+      }
+    },
+    "Unknown": {
+      "total": {
+        "repositories": 2092,
+        "commits": 319769
+      },
+      "originals": {
+        "repositories": 229,
+        "commits": 178809
+      },
+      "forks": {
+        "repositories": 1863,
+        "commits": 140960
+      }
+    },
+    "nan": {
+      "total": {
+        "repositories": 1404,
+        "commits": 20012
+      },
+      "originals": {
+        "repositories": 301,
+        "commits": 1321
+      },
+      "forks": {
+        "repositories": 1103,
+        "commits": 18691
+      }
+    }
+  },
+  "metadata": {
+    "generated_at": "2024-11-08T21:17:21.790474",
+    "description": "Repository statistics by classification and fork status"
+  }
+}

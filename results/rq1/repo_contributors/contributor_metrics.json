@@ -1,0 +1,17 @@
+{
+  "repository_stats": {
+    "total_repositories": 23470,
+    "mean_contributors": 59.49433319130805,
+    "median_contributors": 25.0,
+    "max_contributors": 476,
+    "min_contributors": 1,
+    "total_contributors": 1396332
+  },
+  "percentiles": {
+    "25th": 8.0,
+    "50th": 25.0,
+    "75th": 68.0,
+    "90th": 146.0,
+    "95th": 271.0
+  }
+}

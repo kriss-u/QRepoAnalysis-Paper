@@ -1,0 +1,7 @@
+Repository Activity Analysis Summary
+===================================
+
+Total Repositories: 23,610
+Never Updated Repositories: 3,238
+Median Lifetime: 0 days
+Average Lifetime: 128.0 days

@@ -1,0 +1,31 @@
+[
+  {
+    "total_repositories":20476,
+    "total_categories":9,
+    "category_distribution":{
+      "SDK\/API":10163,
+      "Education\/Tutorials":2980,
+      "Quantum Simulation":2885,
+      "Algorithm Implementation":1506,
+      "Quantum Machine Learning":1099,
+      "Quantum Chemistry":858,
+      "Compiler\/Transpiler":532,
+      "Circuit Optimization":352,
+      "Benchmarking Tools":101
+    },
+    "first_repository_date":"2012-01-27 15:20:23",
+    "latest_repository_date":"2024-09-30 17:32:14",
+    "years_active":12.6762491444,
+    "category_percentages":{
+      "SDK\/API":49.633717523,
+      "Education\/Tutorials":14.5536237546,
+      "Quantum Simulation":14.0896659504,
+      "Algorithm Implementation":7.3549521391,
+      "Quantum Machine Learning":5.3672592303,
+      "Quantum Chemistry":4.1902715374,
+      "Compiler\/Transpiler":2.5981637038,
+      "Circuit Optimization":1.7190857589,
+      "Benchmarking Tools":0.4932604024
+    }
+  }
+]

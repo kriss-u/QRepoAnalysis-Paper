@@ -1,0 +1,40 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyarrow = "*"
+tqdm = "*"
+pandas = "*"
+seaborn = "*"
+numpy = "*"
+humanize = "*"
+scipy = "*"
+networkx = "*"
+python-louvain = "*"
+scikit-learn = "*"
+dask = {extras = ["distributed"], version = "*"}
+bokeh = "*"
+wordcloud = "*"
+matplotlib = "*"
+statsmodels = "*"
+python-dotenv = "*"
+multidict = "*"
+aiohttp = "*"
+tomli = "*"
+requests = "*"
+jsonlines = "*"
+aiofiles = "*"
+torch = "*"
+bertopic = "*"
+sentence-transformers = "*"
+nltk = "*"
+keybert = "*"
+spacy = "*"
+multiprocess = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"

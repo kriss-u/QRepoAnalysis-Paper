@@ -1,0 +1,348 @@
+period,new_repos,category,total_repos
+2012-03-31,1,SDK/API,1
+2012-06-30,1,SDK/API,2
+2012-09-30,0,SDK/API,2
+2012-12-31,1,SDK/API,3
+2013-03-31,0,SDK/API,3
+2013-06-30,0,SDK/API,3
+2013-09-30,3,SDK/API,6
+2013-12-31,2,SDK/API,8
+2014-03-31,2,SDK/API,10
+2014-06-30,30,SDK/API,40
+2014-09-30,70,SDK/API,110
+2014-12-31,55,SDK/API,165
+2015-03-31,70,SDK/API,235
+2015-06-30,84,SDK/API,319
+2015-09-30,58,SDK/API,377
+2015-12-31,53,SDK/API,430
+2016-03-31,60,SDK/API,490
+2016-06-30,72,SDK/API,562
+2016-09-30,53,SDK/API,615
+2016-12-31,59,SDK/API,674
+2017-03-31,125,SDK/API,799
+2017-06-30,120,SDK/API,919
+2017-09-30,151,SDK/API,1070
+2017-12-31,210,SDK/API,1280
+2018-03-31,225,SDK/API,1505
+2018-06-30,197,SDK/API,1702
+2018-09-30,321,SDK/API,2023
+2018-12-31,272,SDK/API,2295
+2019-03-31,271,SDK/API,2566
+2019-06-30,281,SDK/API,2847
+2019-09-30,264,SDK/API,3111
+2019-12-31,270,SDK/API,3381
+2020-03-31,262,SDK/API,3643
+2020-06-30,344,SDK/API,3987
+2020-09-30,305,SDK/API,4292
+2020-12-31,328,SDK/API,4620
+2021-03-31,333,SDK/API,4953
+2021-06-30,431,SDK/API,5384
+2021-09-30,320,SDK/API,5704
+2021-12-31,308,SDK/API,6012
+2022-03-31,314,SDK/API,6326
+2022-06-30,367,SDK/API,6693
+2022-09-30,309,SDK/API,7002
+2022-12-31,317,SDK/API,7319
+2023-03-31,311,SDK/API,7630
+2023-06-30,454,SDK/API,8084
+2023-09-30,382,SDK/API,8466
+2023-12-31,428,SDK/API,8894
+2024-03-31,422,SDK/API,9316
+2024-06-30,445,SDK/API,9761
+2024-09-30,402,SDK/API,10163
+2012-03-31,1,Quantum Simulation,1
+2012-06-30,2,Quantum Simulation,3
+2012-09-30,0,Quantum Simulation,3
+2012-12-31,4,Quantum Simulation,7
+2013-03-31,3,Quantum Simulation,10
+2013-06-30,1,Quantum Simulation,11
+2013-09-30,7,Quantum Simulation,18
+2013-12-31,5,Quantum Simulation,23
+2014-03-31,5,Quantum Simulation,28
+2014-06-30,11,Quantum Simulation,39
+2014-09-30,9,Quantum Simulation,48
+2014-12-31,2,Quantum Simulation,50
+2015-03-31,5,Quantum Simulation,55
+2015-06-30,6,Quantum Simulation,61
+2015-09-30,4,Quantum Simulation,65
+2015-12-31,10,Quantum Simulation,75
+2016-03-31,9,Quantum Simulation,84
+2016-06-30,15,Quantum Simulation,99
+2016-09-30,12,Quantum Simulation,111
+2016-12-31,10,Quantum Simulation,121
+2017-03-31,21,Quantum Simulation,142
+2017-06-30,25,Quantum Simulation,167
+2017-09-30,30,Quantum Simulation,197
+2017-12-31,25,Quantum Simulation,222
+2018-03-31,25,Quantum Simulation,247
+2018-06-30,61,Quantum Simulation,308
+2018-09-30,43,Quantum Simulation,351
+2018-12-31,47,Quantum Simulation,398
+2019-03-31,85,Quantum Simulation,483
+2019-06-30,67,Quantum Simulation,550
+2019-09-30,78,Quantum Simulation,628
+2019-12-31,68,Quantum Simulation,696
+2020-03-31,95,Quantum Simulation,791
+2020-06-30,128,Quantum Simulation,919
+2020-09-30,110,Quantum Simulation,1029
+2020-12-31,110,Quantum Simulation,1139
+2021-03-31,99,Quantum Simulation,1238
+2021-06-30,110,Quantum Simulation,1348
+2021-09-30,72,Quantum Simulation,1420
+2021-12-31,107,Quantum Simulation,1527
+2022-03-31,108,Quantum Simulation,1635
+2022-06-30,161,Quantum Simulation,1796
+2022-09-30,116,Quantum Simulation,1912
+2022-12-31,111,Quantum Simulation,2023
+2023-03-31,126,Quantum Simulation,2149
+2023-06-30,137,Quantum Simulation,2286
+2023-09-30,132,Quantum Simulation,2418
+2023-12-31,110,Quantum Simulation,2528
+2024-03-31,113,Quantum Simulation,2641
+2024-06-30,135,Quantum Simulation,2776
+2024-09-30,109,Quantum Simulation,2885
+2012-09-30,1,Algorithm Implementation,1
+2012-12-31,0,Algorithm Implementation,1
+2013-03-31,0,Algorithm Implementation,1
+2013-06-30,0,Algorithm Implementation,1
+2013-09-30,0,Algorithm Implementation,1
+2013-12-31,1,Algorithm Implementation,2
+2014-03-31,1,Algorithm Implementation,3
+2014-06-30,0,Algorithm Implementation,3
+2014-09-30,0,Algorithm Implementation,3
+2014-12-31,1,Algorithm Implementation,4
+2015-03-31,0,Algorithm Implementation,4
+2015-06-30,0,Algorithm Implementation,4
+2015-09-30,1,Algorithm Implementation,5
+2015-12-31,3,Algorithm Implementation,8
+2016-03-31,2,Algorithm Implementation,10
+2016-06-30,7,Algorithm Implementation,17
+2016-09-30,3,Algorithm Implementation,20
+2016-12-31,4,Algorithm Implementation,24
+2017-03-31,109,Algorithm Implementation,133
+2017-06-30,33,Algorithm Implementation,166
+2017-09-30,30,Algorithm Implementation,196
+2017-12-31,29,Algorithm Implementation,225
+2018-03-31,25,Algorithm Implementation,250
+2018-06-30,20,Algorithm Implementation,270
+2018-09-30,16,Algorithm Implementation,286
+2018-12-31,22,Algorithm Implementation,308
+2019-03-31,14,Algorithm Implementation,322
+2019-06-30,25,Algorithm Implementation,347
+2019-09-30,17,Algorithm Implementation,364
+2019-12-31,14,Algorithm Implementation,378
+2020-03-31,27,Algorithm Implementation,405
+2020-06-30,36,Algorithm Implementation,441
+2020-09-30,23,Algorithm Implementation,464
+2020-12-31,24,Algorithm Implementation,488
+2021-03-31,64,Algorithm Implementation,552
+2021-06-30,92,Algorithm Implementation,644
+2021-09-30,63,Algorithm Implementation,707
+2021-12-31,60,Algorithm Implementation,767
+2022-03-31,59,Algorithm Implementation,826
+2022-06-30,73,Algorithm Implementation,899
+2022-09-30,49,Algorithm Implementation,948
+2022-12-31,64,Algorithm Implementation,1012
+2023-03-31,53,Algorithm Implementation,1065
+2023-06-30,77,Algorithm Implementation,1142
+2023-09-30,67,Algorithm Implementation,1209
+2023-12-31,65,Algorithm Implementation,1274
+2024-03-31,69,Algorithm Implementation,1343
+2024-06-30,84,Algorithm Implementation,1427
+2024-09-30,79,Algorithm Implementation,1506
+2014-06-30,1,Education/Tutorials,1
+2014-09-30,1,Education/Tutorials,2
+2014-12-31,2,Education/Tutorials,4
+2015-03-31,2,Education/Tutorials,6
+2015-06-30,2,Education/Tutorials,8
+2015-09-30,2,Education/Tutorials,10
+2015-12-31,3,Education/Tutorials,13
+2016-03-31,3,Education/Tutorials,16
+2016-06-30,15,Education/Tutorials,31
+2016-09-30,12,Education/Tutorials,43
+2016-12-31,6,Education/Tutorials,49
+2017-03-31,8,Education/Tutorials,57
+2017-06-30,7,Education/Tutorials,64
+2017-09-30,8,Education/Tutorials,72
+2017-12-31,6,Education/Tutorials,78
+2018-03-31,9,Education/Tutorials,87
+2018-06-30,11,Education/Tutorials,98
+2018-09-30,142,Education/Tutorials,240
+2018-12-31,65,Education/Tutorials,305
+2019-03-31,75,Education/Tutorials,380
+2019-06-30,45,Education/Tutorials,425
+2019-09-30,83,Education/Tutorials,508
+2019-12-31,108,Education/Tutorials,616
+2020-03-31,131,Education/Tutorials,747
+2020-06-30,181,Education/Tutorials,928
+2020-09-30,179,Education/Tutorials,1107
+2020-12-31,143,Education/Tutorials,1250
+2021-03-31,132,Education/Tutorials,1382
+2021-06-30,136,Education/Tutorials,1518
+2021-09-30,189,Education/Tutorials,1707
+2021-12-31,92,Education/Tutorials,1799
+2022-03-31,135,Education/Tutorials,1934
+2022-06-30,142,Education/Tutorials,2076
+2022-09-30,128,Education/Tutorials,2204
+2022-12-31,118,Education/Tutorials,2322
+2023-03-31,136,Education/Tutorials,2458
+2023-06-30,120,Education/Tutorials,2578
+2023-09-30,70,Education/Tutorials,2648
+2023-12-31,67,Education/Tutorials,2715
+2024-03-31,107,Education/Tutorials,2822
+2024-06-30,82,Education/Tutorials,2904
+2024-09-30,76,Education/Tutorials,2980
+2015-03-31,1,Circuit Optimization,1
+2015-06-30,0,Circuit Optimization,1
+2015-09-30,0,Circuit Optimization,1
+2015-12-31,0,Circuit Optimization,1
+2016-03-31,0,Circuit Optimization,1
+2016-06-30,2,Circuit Optimization,3
+2016-09-30,0,Circuit Optimization,3
+2016-12-31,3,Circuit Optimization,6
+2017-03-31,4,Circuit Optimization,10
+2017-06-30,2,Circuit Optimization,12
+2017-09-30,2,Circuit Optimization,14
+2017-12-31,1,Circuit Optimization,15
+2018-03-31,1,Circuit Optimization,16
+2018-06-30,4,Circuit Optimization,20
+2018-09-30,7,Circuit Optimization,27
+2018-12-31,4,Circuit Optimization,31
+2019-03-31,6,Circuit Optimization,37
+2019-06-30,3,Circuit Optimization,40
+2019-09-30,2,Circuit Optimization,42
+2019-12-31,4,Circuit Optimization,46
+2020-03-31,4,Circuit Optimization,50
+2020-06-30,5,Circuit Optimization,55
+2020-09-30,7,Circuit Optimization,62
+2020-12-31,6,Circuit Optimization,68
+2021-03-31,15,Circuit Optimization,83
+2021-06-30,15,Circuit Optimization,98
+2021-09-30,22,Circuit Optimization,120
+2021-12-31,14,Circuit Optimization,134
+2022-03-31,18,Circuit Optimization,152
+2022-06-30,12,Circuit Optimization,164
+2022-09-30,9,Circuit Optimization,173
+2022-12-31,18,Circuit Optimization,191
+2023-03-31,18,Circuit Optimization,209
+2023-06-30,36,Circuit Optimization,245
+2023-09-30,20,Circuit Optimization,265
+2023-12-31,23,Circuit Optimization,288
+2024-03-31,17,Circuit Optimization,305
+2024-06-30,25,Circuit Optimization,330
+2024-09-30,22,Circuit Optimization,352
+2016-03-31,2,Compiler/Transpiler,2
+2016-06-30,1,Compiler/Transpiler,3
+2016-09-30,3,Compiler/Transpiler,6
+2016-12-31,2,Compiler/Transpiler,8
+2017-03-31,3,Compiler/Transpiler,11
+2017-06-30,3,Compiler/Transpiler,14
+2017-09-30,3,Compiler/Transpiler,17
+2017-12-31,6,Compiler/Transpiler,23
+2018-03-31,4,Compiler/Transpiler,27
+2018-06-30,5,Compiler/Transpiler,32
+2018-09-30,5,Compiler/Transpiler,37
+2018-12-31,5,Compiler/Transpiler,42
+2019-03-31,16,Compiler/Transpiler,58
+2019-06-30,24,Compiler/Transpiler,82
+2019-09-30,12,Compiler/Transpiler,94
+2019-12-31,9,Compiler/Transpiler,103
+2020-03-31,15,Compiler/Transpiler,118
+2020-06-30,35,Compiler/Transpiler,153
+2020-09-30,25,Compiler/Transpiler,178
+2020-12-31,17,Compiler/Transpiler,195
+2021-03-31,15,Compiler/Transpiler,210
+2021-06-30,9,Compiler/Transpiler,219
+2021-09-30,12,Compiler/Transpiler,231
+2021-12-31,22,Compiler/Transpiler,253
+2022-03-31,24,Compiler/Transpiler,277
+2022-06-30,11,Compiler/Transpiler,288
+2022-09-30,11,Compiler/Transpiler,299
+2022-12-31,13,Compiler/Transpiler,312
+2023-03-31,17,Compiler/Transpiler,329
+2023-06-30,22,Compiler/Transpiler,351
+2023-09-30,31,Compiler/Transpiler,382
+2023-12-31,38,Compiler/Transpiler,420
+2024-03-31,29,Compiler/Transpiler,449
+2024-06-30,51,Compiler/Transpiler,500
+2024-09-30,32,Compiler/Transpiler,532
+2017-06-30,5,Quantum Chemistry,5
+2017-09-30,16,Quantum Chemistry,21
+2017-12-31,74,Quantum Chemistry,95
+2018-03-31,24,Quantum Chemistry,119
+2018-06-30,27,Quantum Chemistry,146
+2018-09-30,25,Quantum Chemistry,171
+2018-12-31,25,Quantum Chemistry,196
+2019-03-31,20,Quantum Chemistry,216
+2019-06-30,16,Quantum Chemistry,232
+2019-09-30,24,Quantum Chemistry,256
+2019-12-31,15,Quantum Chemistry,271
+2020-03-31,26,Quantum Chemistry,297
+2020-06-30,38,Quantum Chemistry,335
+2020-09-30,46,Quantum Chemistry,381
+2020-12-31,45,Quantum Chemistry,426
+2021-03-31,36,Quantum Chemistry,462
+2021-06-30,33,Quantum Chemistry,495
+2021-09-30,24,Quantum Chemistry,519
+2021-12-31,24,Quantum Chemistry,543
+2022-03-31,25,Quantum Chemistry,568
+2022-06-30,31,Quantum Chemistry,599
+2022-09-30,18,Quantum Chemistry,617
+2022-12-31,27,Quantum Chemistry,644
+2023-03-31,26,Quantum Chemistry,670
+2023-06-30,35,Quantum Chemistry,705
+2023-09-30,29,Quantum Chemistry,734
+2023-12-31,26,Quantum Chemistry,760
+2024-03-31,35,Quantum Chemistry,795
+2024-06-30,29,Quantum Chemistry,824
+2024-09-30,34,Quantum Chemistry,858
+2018-06-30,3,Quantum Machine Learning,3
+2018-09-30,4,Quantum Machine Learning,7
+2018-12-31,2,Quantum Machine Learning,9
+2019-03-31,0,Quantum Machine Learning,9
+2019-06-30,1,Quantum Machine Learning,10
+2019-09-30,3,Quantum Machine Learning,13
+2019-12-31,3,Quantum Machine Learning,16
+2020-03-31,100,Quantum Machine Learning,116
+2020-06-30,67,Quantum Machine Learning,183
+2020-09-30,39,Quantum Machine Learning,222
+2020-12-31,39,Quantum Machine Learning,261
+2021-03-31,55,Quantum Machine Learning,316
+2021-06-30,37,Quantum Machine Learning,353
+2021-09-30,44,Quantum Machine Learning,397
+2021-12-31,52,Quantum Machine Learning,449
+2022-03-31,53,Quantum Machine Learning,502
+2022-06-30,68,Quantum Machine Learning,570
+2022-09-30,57,Quantum Machine Learning,627
+2022-12-31,72,Quantum Machine Learning,699
+2023-03-31,64,Quantum Machine Learning,763
+2023-06-30,78,Quantum Machine Learning,841
+2023-09-30,59,Quantum Machine Learning,900
+2023-12-31,44,Quantum Machine Learning,944
+2024-03-31,53,Quantum Machine Learning,997
+2024-06-30,62,Quantum Machine Learning,1059
+2024-09-30,40,Quantum Machine Learning,1099
+2018-12-31,1,Benchmarking Tools,1
+2019-03-31,1,Benchmarking Tools,2
+2019-06-30,1,Benchmarking Tools,3
+2019-09-30,0,Benchmarking Tools,3
+2019-12-31,1,Benchmarking Tools,4
+2020-03-31,1,Benchmarking Tools,5
+2020-06-30,6,Benchmarking Tools,11
+2020-09-30,1,Benchmarking Tools,12
+2020-12-31,2,Benchmarking Tools,14
+2021-03-31,4,Benchmarking Tools,18
+2021-06-30,5,Benchmarking Tools,23
+2021-09-30,2,Benchmarking Tools,25
+2021-12-31,2,Benchmarking Tools,27
+2022-03-31,6,Benchmarking Tools,33
+2022-06-30,13,Benchmarking Tools,46
+2022-09-30,4,Benchmarking Tools,50
+2022-12-31,1,Benchmarking Tools,51
+2023-03-31,8,Benchmarking Tools,59
+2023-06-30,7,Benchmarking Tools,66
+2023-09-30,1,Benchmarking Tools,67
+2023-12-31,4,Benchmarking Tools,71
+2024-03-31,14,Benchmarking Tools,85
+2024-06-30,9,Benchmarking Tools,94
+2024-09-30,7,Benchmarking Tools,101

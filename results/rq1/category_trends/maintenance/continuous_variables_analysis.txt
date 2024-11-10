@@ -1,0 +1,10 @@
+Statistical Analysis of Continuous Variables
+==========================================
+
+                   Variable High Maintenance Mean Low Maintenance Mean p-value
+           Updated Duration              281.9597             147.6592  <0.001
+                      Stars                6.5573              0.61462  <0.001
+                      Forks                2.1212              0.20753  <0.001
+                       Size            40581.0595           32940.8206  <0.001
+               Contributors               53.2758              62.6904   0.044
+Primary language code lines           468798.7614          115685.0642  <0.001
