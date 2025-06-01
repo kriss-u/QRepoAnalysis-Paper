@@ -7,17 +7,16 @@ import matplotlib.pyplot as plt
 
 from ..config.constants import PROCESSED_DATA_DIR, RAW_DATA_DIR, RESULTS_DIR
 from ..utils.logger import setup_logger
-from ..utils.plot_utils import (
-    FIG_SIZE_LARGE,
-    FONT_WEIGHT_BOLD,
-    FONT_WEIGHT_NORMAL,
-    MAIN_COLORS,
-    apply_grid_style,
-    setup_legend,
-    setup_plotting_style,
-    GREY_COLORS_DARK,
+from ..utils.plot_utils_ieee import (
     FONT_SIZES,
+    FONT_WEIGHT_BOLD,
+    setup_plotting_style,
+    MAIN_COLORS,
+    FIG_SIZE_SINGLE_COL,
+    setup_legend,
     save_plot,
+    apply_grid_style,
+    GREY_COLORS_DARK,
 )
 
 logger = setup_logger(__name__, "rq2", "commits_classification")
@@ -206,7 +205,9 @@ def create_maintenance_distribution_plot(stats, output_dir):
     high_maint_commits = [high_maint_commits[i] for i in sort_idx]
     low_maint_commits = [low_maint_commits[i] for i in sort_idx]
 
-    fig, ax = plt.subplots(figsize=FIG_SIZE_LARGE)
+    fig, ax = plt.subplots(
+        figsize=(FIG_SIZE_SINGLE_COL[0], FIG_SIZE_SINGLE_COL[1] * 1.5)
+    )
 
     x = np.arange(len(classifications))
     width = 0.35
@@ -229,13 +230,6 @@ def create_maintenance_distribution_plot(stats, output_dir):
     ax.set_ylabel(
         "Number of Commits",
         fontsize=FONT_SIZES["axis_label"],
-        fontweight=FONT_WEIGHT_NORMAL,
-    )
-    ax.set_title(
-        "Distribution of Commits by Maintenance Category",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
     )
 
     ax.set_xticks(x)
@@ -256,7 +250,17 @@ def create_maintenance_distribution_plot(stats, output_dir):
 
     ax.set_yticks(ticks)
 
-    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: format(int(x), ",")))
+    def format_large_numbers(x, p):
+        if x >= 1_000_000_000:
+            return f"{x/1_000_000_000:.0f}B"
+        elif x >= 1_000_000:
+            return f"{x/1_000_000:.0f}M"
+        elif x >= 1_000:
+            return f"{x/1_000:.0f}K"
+        else:
+            return f"{x:.0f}"
+
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(format_large_numbers))
 
     apply_grid_style(ax)
 
@@ -266,7 +270,7 @@ def create_maintenance_distribution_plot(stats, output_dir):
             if height > 0:  # Only add label if there are commits
                 ax.text(
                     bar.get_x() + bar.get_width() / 2,
-                    height,
+                    height * 1.1,  # Add 10% spacing above the bar
                     f"{int(height):,}",
                     ha="center",
                     va="bottom",
@@ -278,7 +282,7 @@ def create_maintenance_distribution_plot(stats, output_dir):
     add_value_labels(high_bars)
     add_value_labels(low_bars)
 
-    setup_legend(ax, loc="upper right", ncol=2)
+    setup_legend(ax, loc="upper right")
 
     plt.tight_layout()
 

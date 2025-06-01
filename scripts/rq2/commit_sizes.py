@@ -7,15 +7,17 @@ from scipy.interpolate import make_interp_spline
 
 from ..config.constants import PROCESSED_DATA_DIR
 from ..utils.logger import setup_logger
-from ..utils.plot_utils import (
+from ..utils.plot_utils_ieee import (
     FONT_SIZES,
     FONT_WEIGHT_BOLD,
     setup_plotting_style,
     MAIN_COLORS,
-    FIG_SIZE_LARGE,
+    FIG_SIZE_SINGLE_COL,
+    PLOT_LINE_WIDTH,
     setup_axis_ticks,
     setup_legend,
     save_plot,
+    apply_grid_style,
 )
 
 logger = setup_logger(__name__, "rq2", "commit_sizes")
@@ -189,7 +191,7 @@ def analyze_commit_sizes(args):
 
 def create_volume_plot(df, granularity, plots_dir):
     setup_plotting_style()
-    fig, ax = plt.subplots(figsize=FIG_SIZE_LARGE)
+    fig, ax = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
 
     dates = df.index.to_pydatetime()
     volume = df["insertions"] + df["deletions"]
@@ -262,7 +264,7 @@ def create_volume_plot(df, granularity, plots_dir):
 
 def create_dual_axis_plot(df, granularity, plots_dir):
     setup_plotting_style()
-    fig, ax1 = plt.subplots(figsize=FIG_SIZE_LARGE)
+    fig, ax1 = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
     ax2 = ax1.twinx()
 
     dates = df.index.to_pydatetime()
@@ -356,14 +358,14 @@ def smooth_with_boundary_conditions(dates, values, num_points=300):
 
 def create_log_volume_plot(df, granularity, plots_dir):
     setup_plotting_style()
-    fig, ax = plt.subplots(figsize=FIG_SIZE_LARGE)
+    fig, ax = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
 
     dates = df.index.to_pydatetime()
     volume = df["insertions"] + df["deletions"]
 
     from scipy.signal import savgol_filter
 
-    window_length = 3  # Must be odd number
+    window_length = 5
     poly_order = 1
 
     volume_smooth = savgol_filter(volume.values, window_length, poly_order)
@@ -377,13 +379,13 @@ def create_log_volume_plot(df, granularity, plots_dir):
         volume_smooth,
         label="Total Changes",
         color=MAIN_COLORS[0],
-        linewidth=2.5,
+        linewidth=PLOT_LINE_WIDTH,
         alpha=0.8,
     )
 
     ax.fill_between(
         dates,
-        1,  # Start from 1 for log scale
+        1000,
         insertions_smooth,
         alpha=0.3,
         color=MAIN_COLORS[1],
@@ -399,12 +401,6 @@ def create_log_volume_plot(df, granularity, plots_dir):
         label="Deletions",
     )
 
-    ax.set_title(
-        "Volume of Code Changes Over Time",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
-    )
     ax.set_xlabel("")
     ax.set_ylabel(
         "Number of Lines Changed",
@@ -412,15 +408,24 @@ def create_log_volume_plot(df, granularity, plots_dir):
     )
 
     ax.set_yscale("log")
+    ax.set_ylim(bottom=1000)
 
-    ax.grid(True, which="major", linestyle="--", alpha=0.7)
-    ax.grid(True, which="minor", linestyle=":", alpha=0.4)
-    ax.set_axisbelow(True)
+    apply_grid_style(ax)
 
-    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: format(int(x), ",")))
+    def format_large_numbers(x, p):
+        if x >= 1_000_000_000:
+            return f"{x/1_000_000_000:.0f}B"
+        elif x >= 1_000_000:
+            return f"{x/1_000_000:.0f}M"
+        elif x >= 1_000:
+            return f"{x/1_000:.0f}K"
+        else:
+            return f"{x:.0f}"
 
-    setup_axis_ticks(ax, dates, granularity)
-    setup_legend(ax, title="Changes", loc="upper left")
+    setup_axis_ticks(ax, dates, granularity, n_ticks=8)
+    setup_legend(ax, title="Changes", loc="lower right")
+
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(format_large_numbers))
 
     save_plot(fig, plots_dir, f"commit_volume_log_{granularity}")
     plt.close(fig)
@@ -428,14 +433,14 @@ def create_log_volume_plot(df, granularity, plots_dir):
 
 def create_log_dual_axis_plot(df, granularity, plots_dir):
     setup_plotting_style()
-    fig, ax1 = plt.subplots(figsize=FIG_SIZE_LARGE)
+    fig, ax1 = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
     ax2 = ax1.twinx()
 
     dates = df.index.to_pydatetime()
 
     from scipy.signal import savgol_filter
 
-    window_length = 3  # Must be odd number
+    window_length = 5
     poly_order = 1
 
     lines1 = []
@@ -448,7 +453,7 @@ def create_log_dual_axis_plot(df, granularity, plots_dir):
             values_smooth,
             label=label,
             color=MAIN_COLORS[idx],
-            linewidth=2.5,
+            linewidth=PLOT_LINE_WIDTH,
             alpha=0.8,
         )
         lines1.extend(ln)
@@ -459,16 +464,10 @@ def create_log_dual_axis_plot(df, granularity, plots_dir):
         files_smooth,
         label="Files Changed",
         color=MAIN_COLORS[2],
-        linewidth=2.5,
+        linewidth=PLOT_LINE_WIDTH,
         alpha=0.8,
     )
 
-    ax1.set_title(
-        "Commit Changes Over Time",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
-    )
     ax1.set_xlabel("")
     ax1.set_ylabel(
         "Number of Lines Added/Deleted",
@@ -482,14 +481,21 @@ def create_log_dual_axis_plot(df, granularity, plots_dir):
     ax1.set_yscale("log")
     ax2.set_yscale("log")
 
-    ax1.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: format(int(x), ",")))
-    ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: format(int(x), ",")))
+    def format_large_numbers(x, p):
+        if x >= 1_000_000_000:
+            return f"{x/1_000_000_000:.0f}B"
+        elif x >= 1_000_000:
+            return f"{x/1_000_000:.0f}M"
+        elif x >= 1_000:
+            return f"{x/1_000:.0f}K"
+        else:
+            return f"{x:.0f}"
 
-    ax1.grid(True, which="major", linestyle="--", alpha=0.7)
-    ax1.grid(True, which="minor", linestyle=":", alpha=0.4)
-    ax1.set_axisbelow(True)
+    apply_grid_style(ax1)
 
-    setup_axis_ticks(ax1, dates, granularity)
+    setup_axis_ticks(ax1, dates, granularity, n_ticks=8)
+    ax1.yaxis.set_major_formatter(plt.FuncFormatter(format_large_numbers))
+    ax2.yaxis.set_major_formatter(plt.FuncFormatter(format_large_numbers))
 
     lines = lines1 + line2
     labels = [l.get_label() for l in lines]
@@ -497,7 +503,7 @@ def create_log_dual_axis_plot(df, granularity, plots_dir):
     ax1.legend(
         lines,
         labels,
-        loc="upper left",
+        loc="lower right",
         title="Metrics",
         fontsize=FONT_SIZES["legend"],
         title_fontsize=FONT_SIZES["legend"],

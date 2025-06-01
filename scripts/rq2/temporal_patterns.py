@@ -6,18 +6,21 @@ from tqdm import tqdm
 from scripts.config.constants import PROCESSED_DATA_DIR, PROJECT_ROOT
 from scripts.utils.helpers import convert_categorical_to_boolean
 from scripts.utils.logger import setup_logger
-from scripts.utils.plot_utils import (
-    FONT_SIZES,
-    FONT_WEIGHT_BOLD,
+from ..utils.plot_utils_ieee import (
     GREY_COLORS_DARK,
-    apply_grid_style,
     setup_plotting_style,
-    smooth_with_bspline,
+    MAIN_COLORS,
+    PAIRED_COLORS,
+    FIG_SIZE_SINGLE_COL,
+    PLOT_LINE_WIDTH,
+    MARKER_SIZE,
     setup_axis_ticks,
     setup_legend,
     save_plot,
-    FIG_SIZE_LARGE,
-    MAIN_COLORS,
+    create_pie_chart,
+    apply_grid_style,
+    FONT_SIZES,
+    CATEGORICAL_COLORS,
 )
 
 logger = setup_logger(__name__, "rq2", "temporal_patterns")
@@ -84,69 +87,7 @@ def load_commit_data():
 def create_fork_comparison_plot(time_series, granularity, output_dir):
     setup_plotting_style()
 
-    fig, ax = plt.subplots(figsize=FIG_SIZE_LARGE)
-
-    dates = time_series.index.to_pydatetime()
-
-    dates_smooth, values_smooth = smooth_with_bspline(
-        dates, time_series["original"].values
-    )
-    ax.plot(
-        dates_smooth,
-        values_smooth,
-        label="Original Repositories",
-        color=GREY_COLORS_DARK[0],
-        linewidth=2.5,
-        alpha=0.8,
-    )
-
-    dates_smooth, values_smooth = smooth_with_bspline(dates, time_series["fork"].values)
-    ax.plot(
-        dates_smooth,
-        values_smooth,
-        label="Fork Repositories",
-        color=GREY_COLORS_DARK[6],
-        linewidth=2.5,
-        alpha=0.8,
-    )
-
-    ax.set_title(
-        "Repository Commits Over Time",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
-    )
-    ax.set_xlabel("")
-    ax.set_ylabel(
-        "Number of Commits",
-        fontsize=FONT_SIZES["axis_label"],
-    )
-
-    setup_axis_ticks(ax, dates, granularity)
-
-    setup_legend(ax, title="Repository Type", loc="upper left", ncol=1)
-
-    ax.grid(True, which="major", linestyle="--", alpha=0.7)
-    ax.grid(True, which="minor", linestyle=":", alpha=0.4)
-    ax.set_axisbelow(True)
-
-    ax.set_yscale("log")
-
-    def format_with_commas(x, p):
-        return f"{int(x):,}"
-
-    ax.yaxis.set_major_formatter(plt.FuncFormatter(format_with_commas))
-
-    plots_dir = output_dir / "plots"
-    plots_dir.mkdir(parents=True, exist_ok=True)
-    save_plot(fig, plots_dir, f"original_vs_fork_commits_{granularity}")
-    plt.close(fig)
-
-
-def create_fork_comparison_plot_log_smooth(time_series, granularity, output_dir):
-    setup_plotting_style()
-
-    fig, ax = plt.subplots(figsize=FIG_SIZE_LARGE)
+    fig, ax = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
 
     dates = time_series.index.to_pydatetime()
 
@@ -165,7 +106,7 @@ def create_fork_comparison_plot_log_smooth(time_series, granularity, output_dir)
         original_smooth,
         label="Original Repositories",
         color=GREY_COLORS_DARK[0],
-        linewidth=2.5,
+        linewidth=PLOT_LINE_WIDTH,
         alpha=0.8,
     )
 
@@ -174,38 +115,73 @@ def create_fork_comparison_plot_log_smooth(time_series, granularity, output_dir)
         fork_smooth,
         label="Fork Repositories",
         color=GREY_COLORS_DARK[6],
-        linewidth=2.5,
+        linewidth=PLOT_LINE_WIDTH,
         alpha=0.8,
     )
 
-    ax.set_title(
-        "Repository Commits Over Time",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
-    )
     ax.set_xlabel("")
-    ax.set_ylabel(
-        "Number of Commits",
-        fontsize=FONT_SIZES["axis_label"],
+    ax.set_ylabel("Number of Commits", fontsize=FONT_SIZES["axis_label"])
+
+    setup_axis_ticks(ax, dates, granularity, n_ticks=8)
+    setup_legend(ax, title="Repository Type", loc="upper left", ncol=1)
+    apply_grid_style(ax)
+
+    ax.set_yscale("log")
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f"{int(x):,}"))
+
+    plots_dir = output_dir / "plots"
+    plots_dir.mkdir(parents=True, exist_ok=True)
+    save_plot(fig, plots_dir, f"original_vs_fork_commits_{granularity}")
+    plt.close(fig)
+
+
+def create_fork_comparison_plot_log_smooth(time_series, granularity, output_dir):
+    setup_plotting_style()
+
+    fig, ax = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
+
+    dates = time_series.index.to_pydatetime()
+
+    from scipy.signal import savgol_filter
+
+    window_length = 5
+    poly_order = 3
+
+    original_smooth = savgol_filter(
+        time_series["original"].values, window_length, poly_order
     )
+    fork_smooth = savgol_filter(time_series["fork"].values, window_length, poly_order)
+
+    ax.plot(
+        dates,
+        original_smooth,
+        label="Original Repositories",
+        color=GREY_COLORS_DARK[0],
+        linewidth=PLOT_LINE_WIDTH,
+        alpha=0.8,
+    )
+
+    ax.plot(
+        dates,
+        fork_smooth,
+        label="Fork Repositories",
+        color=GREY_COLORS_DARK[6],
+        linewidth=PLOT_LINE_WIDTH,
+        alpha=0.8,
+    )
+
+    ax.set_xlabel("")
+    ax.set_ylabel("Number of Commits", fontsize=FONT_SIZES["axis_label"])
 
     ax.set_yscale("log")
 
-    setup_axis_ticks(ax, dates, granularity)
-
+    setup_axis_ticks(ax, dates, granularity, n_ticks=8)
     setup_legend(ax, title="Repository Type", loc="upper left", ncol=1)
+    apply_grid_style(ax)
 
-    ax.grid(True, which="major", linestyle="--", alpha=0.7)
-    ax.grid(True, which="minor", linestyle=":", alpha=0.4)
-    ax.set_axisbelow(True)
-
-    def format_with_commas(x, p):
-        if x < 1:
-            return "0"
-        return f"{int(x):,}"
-
-    ax.yaxis.set_major_formatter(plt.FuncFormatter(format_with_commas))
+    ax.yaxis.set_major_formatter(
+        plt.FuncFormatter(lambda x, p: "0" if x < 1 else f"{int(x):,}")
+    )
 
     plots_dir = output_dir / "plots"
     plots_dir.mkdir(parents=True, exist_ok=True)
@@ -216,54 +192,47 @@ def create_fork_comparison_plot_log_smooth(time_series, granularity, output_dir)
 def create_cumulative_comparison_plot(time_series, granularity, output_dir):
     setup_plotting_style()
 
-    fig, ax = plt.subplots(figsize=FIG_SIZE_LARGE)
+    fig, ax = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
 
     dates = time_series.index.to_pydatetime()
 
-    dates_smooth, values_smooth = smooth_with_bspline(
-        dates, time_series["original_cumulative"].values
+    from scipy.signal import savgol_filter
+
+    window_length = 5
+    poly_order = 3
+
+    original_smooth = savgol_filter(
+        time_series["original_cumulative"].values, window_length, poly_order
     )
+    fork_smooth = savgol_filter(
+        time_series["fork_cumulative"].values, window_length, poly_order
+    )
+
     ax.plot(
-        dates_smooth,
-        values_smooth,
+        dates,
+        original_smooth,
         label="Original Repositories",
         color=GREY_COLORS_DARK[0],
-        linewidth=2.5,
+        linewidth=PLOT_LINE_WIDTH,
         alpha=0.8,
     )
 
-    dates_smooth, values_smooth = smooth_with_bspline(
-        dates, time_series["fork_cumulative"].values
-    )
     ax.plot(
-        dates_smooth,
-        values_smooth,
+        dates,
+        fork_smooth,
         label="Fork Repositories",
         color=GREY_COLORS_DARK[6],
-        linewidth=2.5,
+        linewidth=PLOT_LINE_WIDTH,
         alpha=0.8,
     )
 
-    ax.set_title(
-        "Cumulative Repository Commits Over Time",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
-    )
     ax.set_ylabel("Cumulative Number of Commits", fontsize=FONT_SIZES["axis_label"])
 
-    setup_axis_ticks(ax, dates, granularity)
-
+    setup_axis_ticks(ax, dates, granularity, n_ticks=8)
     setup_legend(ax, title="Repository Type", loc="upper left", ncol=1)
+    apply_grid_style(ax)
 
-    ax.grid(True, which="major", linestyle="--", alpha=0.7)
-    ax.grid(True, which="minor", linestyle=":", alpha=0.4)
-    ax.set_axisbelow(True)
-
-    def format_with_commas(x, p):
-        return f"{int(x):,}"
-
-    ax.yaxis.set_major_formatter(plt.FuncFormatter(format_with_commas))
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f"{int(x):,}"))
 
     plots_dir = output_dir / "plots"
     plots_dir.mkdir(parents=True, exist_ok=True)
@@ -315,45 +284,38 @@ def calculate_commit_frequencies(df, freq):
 def create_total_commits_plot(time_series, granularity, output_dir):
     setup_plotting_style()
 
-    fig, ax = plt.subplots(figsize=FIG_SIZE_LARGE)
+    fig, ax = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
 
     dates = time_series.index.to_pydatetime()
 
-    dates_smooth, values_smooth = smooth_with_bspline(
-        dates, time_series["total"].values
-    )
+    from scipy.interpolate import CubicSpline
+    import numpy as np
+
+    date_nums = np.array([d.timestamp() for d in dates])
+    values = time_series["total"].values
+
+    cs = CubicSpline(date_nums, values)
+
+    smooth_date_nums = np.linspace(date_nums[0], date_nums[-1], len(date_nums) * 2)
+    smooth_dates = [pd.Timestamp.fromtimestamp(ts) for ts in smooth_date_nums]
+    smooth_values = cs(smooth_date_nums)
+
     ax.plot(
-        dates_smooth,
-        values_smooth,
+        smooth_dates,
+        smooth_values,
         color=GREY_COLORS_DARK[0],
-        linewidth=2.5,
+        linewidth=PLOT_LINE_WIDTH,
         alpha=0.8,
     )
 
-    ax.set_title(
-        "Commits Over Time",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
-    )
     ax.set_xlabel("")
-    ax.set_ylabel(
-        "Number of Commits",
-        fontsize=FONT_SIZES["axis_label"],
-    )
+    ax.set_ylabel("Number of Commits", fontsize=FONT_SIZES["axis_label"])
 
-    setup_axis_ticks(ax, dates, granularity)
-
-    ax.grid(True, which="major", linestyle="--", alpha=0.7)
-    ax.grid(True, which="minor", linestyle=":", alpha=0.4)
-    ax.set_axisbelow(True)
+    setup_axis_ticks(ax, dates, granularity, n_ticks=8)
+    apply_grid_style(ax)
 
     ax.set_yscale("log")
-
-    def format_with_commas(x, p):
-        return f"{int(x):,}"
-
-    ax.yaxis.set_major_formatter(plt.FuncFormatter(format_with_commas))
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f"{int(x):,}"))
 
     plots_dir = output_dir / "plots"
     plots_dir.mkdir(parents=True, exist_ok=True)
@@ -422,7 +384,7 @@ def log_cumulative_stats(time_series):
 
 def create_log_volume_plot(df, granularity, plots_dir):
     setup_plotting_style()
-    fig, ax = plt.subplots(figsize=FIG_SIZE_LARGE)
+    fig, ax = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
 
     dates = df.index.to_pydatetime()
     volume = df["insertions"] + df["deletions"]
@@ -443,7 +405,7 @@ def create_log_volume_plot(df, granularity, plots_dir):
         volume_smooth,
         label="Total Changes",
         color=MAIN_COLORS[0],
-        linewidth=2.5,
+        linewidth=PLOT_LINE_WIDTH,
         alpha=0.8,
     )
 
@@ -465,25 +427,15 @@ def create_log_volume_plot(df, granularity, plots_dir):
         label="Deletions",
     )
 
-    ax.set_title(
-        "Volume of Code Changes Over Time (Log Scale)",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
-    )
     ax.set_xlabel("")
     ax.set_ylabel(
-        "Number of Lines Changed (log scale)",
-        fontsize=FONT_SIZES["axis_label"],
+        "Number of Lines Changed (log scale)", fontsize=FONT_SIZES["axis_label"]
     )
 
     ax.set_yscale("log")
+    apply_grid_style(ax)
 
-    ax.grid(True, which="major", linestyle="--", alpha=0.7)
-    ax.grid(True, which="minor", linestyle=":", alpha=0.4)
-    ax.set_axisbelow(True)
-
-    setup_axis_ticks(ax, dates, granularity)
+    setup_axis_ticks(ax, dates, granularity, n_ticks=8)
     setup_legend(ax, title="Changes", loc="upper left")
 
     save_plot(fig, plots_dir, f"commit_volume_log_{granularity}")
@@ -492,7 +444,7 @@ def create_log_volume_plot(df, granularity, plots_dir):
 
 def create_log_dual_axis_plot(df, granularity, plots_dir):
     setup_plotting_style()
-    fig, ax1 = plt.subplots(figsize=FIG_SIZE_LARGE)
+    fig, ax1 = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
     ax2 = ax1.twinx()
 
     dates = df.index.to_pydatetime()
@@ -512,7 +464,7 @@ def create_log_dual_axis_plot(df, granularity, plots_dir):
             values_smooth,
             label=label,
             color=MAIN_COLORS[idx],
-            linewidth=2.5,
+            linewidth=PLOT_LINE_WIDTH,
             alpha=0.8,
         )
         lines1.extend(ln)
@@ -523,34 +475,24 @@ def create_log_dual_axis_plot(df, granularity, plots_dir):
         files_smooth,
         label="Files Changed",
         color=MAIN_COLORS[2],
-        linewidth=2.5,
+        linewidth=PLOT_LINE_WIDTH,
         alpha=0.8,
     )
 
-    ax1.set_title(
-        "Commit Changes Over Time (Log Scale)",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
-    )
     ax1.set_xlabel("")
     ax1.set_ylabel(
-        "Number of Lines Added/Deleted (log scale)",
-        fontsize=FONT_SIZES["axis_label"],
+        "Number of Lines Added/Deleted (log scale)", fontsize=FONT_SIZES["axis_label"]
     )
     ax2.set_ylabel(
-        "Number of Files Changed (log scale)",
-        fontsize=FONT_SIZES["axis_label"],
+        "Number of Files Changed (log scale)", fontsize=FONT_SIZES["axis_label"]
     )
 
     ax1.set_yscale("log")
     ax2.set_yscale("log")
 
-    ax1.grid(True, which="major", linestyle="--", alpha=0.7)
-    ax1.grid(True, which="minor", linestyle=":", alpha=0.4)
-    ax1.set_axisbelow(True)
+    apply_grid_style(ax1)
 
-    setup_axis_ticks(ax1, dates, granularity)
+    setup_axis_ticks(ax1, dates, granularity, n_ticks=8)
 
     lines = lines1 + line2
     labels = [l.get_label() for l in lines]

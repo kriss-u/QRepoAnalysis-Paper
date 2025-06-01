@@ -5,17 +5,21 @@ import matplotlib.pyplot as plt
 
 from ..config.constants import PROCESSED_DATA_DIR, RESULTS_DIR
 from ..utils.logger import setup_logger
-from ..utils.plot_utils import (
-    FONT_SIZES,
-    FONT_WEIGHT_BOLD,
+from ..utils.plot_utils_ieee import (
+    GREY_COLORS_DARK,
     setup_plotting_style,
     MAIN_COLORS,
-    CATEGORICAL_COLORS,
-    FIG_SIZE_LARGE,
-    FIG_SIZE_MEDIUM,
+    PAIRED_COLORS,
+    FIG_SIZE_SINGLE_COL,
+    PLOT_LINE_WIDTH,
+    MARKER_SIZE,
     setup_axis_ticks,
     setup_legend,
     save_plot,
+    create_pie_chart,
+    apply_grid_style,
+    FONT_SIZES,
+    CATEGORICAL_COLORS,
 )
 from scipy.signal import savgol_filter
 
@@ -293,13 +297,15 @@ def create_trend_plot(
     plot_type,
     use_log=False,
 ):
-    if use_log:
-        fig = plt.figure(figsize=(16, 9))
-        plt.subplots_adjust(right=0.85)
-    else:
-        fig = plt.figure(figsize=FIG_SIZE_LARGE)
+    setup_plotting_style()
 
-    ax = fig.add_subplot(111)
+    if use_log:
+        fig, ax = plt.subplots(figsize=(16, 9))
+    else:
+        # Increase figure height to accommodate legend without squeezing chart
+        fig, ax = plt.subplots(
+            figsize=(FIG_SIZE_SINGLE_COL[0], FIG_SIZE_SINGLE_COL[1] + 1.0)
+        )
 
     df_counts = df.set_index("created_at")
     dates = df_counts.index.to_pydatetime()
@@ -325,9 +331,11 @@ def create_trend_plot(
             label=display_name,
             color=colors[color_idx],
             linestyle=line_styles[style_idx],
-            linewidth=2.5,
+            linewidth=PLOT_LINE_WIDTH,
             alpha=0.8,
         )
+
+    ncol = 3 if plot_type == "Programming Languages" else 2
 
     if use_log:
         ax.set_yscale("log")
@@ -337,38 +345,46 @@ def create_trend_plot(
         )
         legend = ax.legend(
             title=plot_type,
-            loc="upper left",
-            ncol=2,
+            bbox_to_anchor=(0.5, -0.25),
+            loc="upper center",
+            ncol=ncol,
             frameon=True,
+            fontsize=FONT_SIZES["legend"],
+            title_fontsize=FONT_SIZES["legend"],
         )
         legend.get_frame().set_facecolor("white")
         legend.get_frame().set_alpha(0.9)
-        legend.get_frame().set_edgecolor("lightgray")
+        legend.get_frame().set_edgecolor("#CCCCCC")
     else:
         ax.set_ylim(bottom=0)
         ax.yaxis.set_major_formatter(
             plt.FuncFormatter(lambda x, p: "{:,.0f}".format(x))
         )
-        legend = ax.legend(title=plot_type, loc="upper left", ncol=2, frameon=True)
+        legend = ax.legend(
+            title=plot_type,
+            bbox_to_anchor=(0.5, -0.25),
+            loc="upper center",
+            ncol=ncol,
+            frameon=True,
+            fontsize=FONT_SIZES["legend"],
+            title_fontsize=FONT_SIZES["legend"],
+        )
         legend.get_frame().set_facecolor("white")
         legend.get_frame().set_alpha(0.9)
+        legend.get_frame().set_edgecolor("#CCCCCC")
 
-    ax.set_title(
-        f"{plot_type} Usage Over Time",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
-    )
     ax.set_xlabel("")
     ax.set_ylabel(
         ("Total Number of Repositories" if use_log else "Total Number of Repositories"),
         fontsize=FONT_SIZES["axis_label"],
     )
 
-    ax.grid(True, which="major", linestyle="--", alpha=0.7)
-    ax.grid(True, which="minor", linestyle=":", alpha=0.4)
+    apply_grid_style(ax)
+    setup_axis_ticks(ax, dates, granularity, n_ticks=8)
 
-    setup_axis_ticks(ax, dates, granularity)
+    # Adjust layout with minimal bottom adjustment since we increased figure height
+    plt.tight_layout()
+    plt.subplots_adjust(bottom=0.28)
 
     suffix = "_log" if use_log else ""
     save_plot(fig, plots_dir, f"{plot_type.lower()}_trends_{granularity}{suffix}")

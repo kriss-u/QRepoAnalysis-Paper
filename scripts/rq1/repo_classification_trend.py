@@ -13,19 +13,22 @@ from ..config.constants import (
     RESULTS_DIR,
 )
 from ..utils.logger import setup_logger
-from ..utils.plot_utils import (
+from ..utils.plot_utils_ieee import (
     FONT_SIZES,
     FONT_WEIGHT_BOLD,
     GREY_COLORS_DARK,
     setup_plotting_style,
     MAIN_COLORS,
     PAIRED_COLORS,
-    FIG_SIZE_LARGE,
-    FIG_SIZE_MEDIUM,
+    FIG_SIZE_SINGLE_COL,
+    PLOT_LINE_WIDTH,
+    MARKER_SIZE,
     setup_axis_ticks,
     setup_legend,
     save_plot,
     create_pie_chart,
+    apply_grid_style,
+    CATEGORICAL_COLORS,
 )
 
 logger = setup_logger(__name__, "rq1", "category_trends")
@@ -113,46 +116,65 @@ def calculate_category_metrics(df):
 
 
 def create_category_timeline(cumulative_df, granularity, plots_dir):
-    fig, ax = plt.subplots(figsize=FIG_SIZE_LARGE)
+    fig, ax = plt.subplots(
+        figsize=(FIG_SIZE_SINGLE_COL[0], FIG_SIZE_SINGLE_COL[1] + 1.0)
+    )
 
-    categories = sorted(cumulative_df["category"].unique())
+    final_counts = (
+        cumulative_df.groupby("category")["total_repos"]
+        .max()
+        .sort_values(ascending=False)
+    )
+    categories = final_counts.index.tolist()
+
+    colors = MAIN_COLORS
+
     for i, category in enumerate(categories):
         category_data = cumulative_df[cumulative_df["category"] == category]
+        color_idx = i % len(colors)
+
         ax.plot(
             category_data["period"],
             category_data["total_repos"],
             label=category,
-            color=MAIN_COLORS[i % len(MAIN_COLORS)],
-            linewidth=2.5,
+            color=colors[color_idx],
+            linewidth=PLOT_LINE_WIDTH,
             alpha=0.8,
         )
 
-    ax.set_title(
-        "Repository Growth by Category Over Time",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
-    )
     ax.set_xlabel("")
     ax.set_ylabel("Number of Repositories", fontsize=FONT_SIZES["axis_label"])
 
     dates = cumulative_df["period"].unique()
-    setup_axis_ticks(ax, dates, granularity)
-
-    y_min, y_max = ax.get_ylim()
-    current_ticks = [tick for tick in ax.get_yticks() if tick >= 0]
-
-    additional_ticks = np.arange(0, 2501, 500)
-    all_ticks = sorted(list(set(current_ticks + list(additional_ticks))))
+    setup_axis_ticks(ax, dates, granularity, n_ticks=8)
 
     ax.set_ylim(bottom=0)
+    current_ticks = list(ax.get_yticks())
+    if 1000 not in current_ticks:
+        current_ticks.append(1000)
+        current_ticks.sort()
+        ax.set_yticks(current_ticks)
 
-    ax.set_yticks(all_ticks)
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: "{:,.0f}".format(x)))
 
-    ax.grid(True, which="major", linestyle="--", alpha=0.7)
-    ax.grid(True, which="minor", linestyle=":", alpha=0.4)
+    apply_grid_style(ax)
 
-    setup_legend(ax, title="Categories", loc="upper left", ncol=2)
+    legend = ax.legend(
+        title="Categories",
+        bbox_to_anchor=(0.5, -0.25),
+        loc="upper center",
+        ncol=2,
+        frameon=True,
+        fontsize=FONT_SIZES["legend"],
+        title_fontsize=FONT_SIZES["legend"],
+    )
+    legend.get_frame().set_facecolor("white")
+    legend.get_frame().set_alpha(0.9)
+    legend.get_frame().set_edgecolor("#CCCCCC")
+
+    # Adjust layout with minimal bottom adjustment since we increased figure height
+    plt.tight_layout()
+    plt.subplots_adjust(bottom=0.28)
 
     save_plot(fig, plots_dir, f"category_timeline_{granularity}")
 
@@ -161,9 +183,9 @@ def create_category_distribution_chart(df, plots_dir):
     category_counts = df["category"].value_counts()
 
     fig, ax = create_pie_chart(
+        title="",
         data=category_counts.values,
         labels=category_counts.index,
-        title="Repository Distribution Across Categories",
         explode=[0.02] * len(category_counts),
     )
 

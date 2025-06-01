@@ -1,61 +1,40 @@
 import pandas as pd
+from pathlib import Path
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 
+from ..utils.plot_utils import FIG_SIZE_LARGE
+
+
 from ..config.constants import PROCESSED_DATA_DIR, RESULTS_DIR
 from ..utils.logger import setup_logger
 from ..utils.plot_utils_ieee import (
+    AXIS_LABEL_PAD,
+    FONT_SIZES,
     GREY_COLORS_DARK,
+    GRID_ALPHA,
+    LAYOUT_PAD,
+    LEGEND_NCOL,
+    MARKER_EDGECOLOR,
+    MARKER_EDGEWIDTH,
+    MARKER_SIZE,
+    MARKER_STYLES,
+    PLOT_LINE_WIDTH,
+    TITLE_PAD,
     setup_plotting_style,
     MAIN_COLORS,
     PAIRED_COLORS,
     FIG_SIZE_SINGLE_COL,
-    PLOT_LINE_WIDTH,
-    MARKER_SIZE,
+    FIG_SIZE_MEDIUM,
+    apply_grid_style,
     setup_axis_ticks,
     setup_legend,
     save_plot,
     create_pie_chart,
-    apply_grid_style,
-    FONT_SIZES,
 )
 
 logger = setup_logger(__name__, "rq1", "popularity_updated")
-
-# Annotation configuration - easy to adjust
-ANNOTATION_CONFIG = {
-    "line_color": "black",
-    "line_width": 0.8,
-    "line_alpha": 0.8,
-    "text_color": "black",
-    "text_style": "italic",
-    "text_weight": "normal",
-    "vertical_spacing": 0.03,
-    "events": [
-        {
-            "date": "2017-03-07",
-            "label": "Qiskit released",
-            "text_x_days": 400,
-            "text_y_fraction": 0.32,
-            "ha": "right",
-        },
-        {
-            "date": "2018-07-18",
-            "label": "Cirq released",
-            "text_x_days": 400,
-            "text_y_fraction": 0.45,
-            "ha": "right",
-        },
-        {
-            "date": "2018-12-21",
-            "label": "US National Quantum Act",
-            "text_x_days": 1100,
-            "text_y_fraction": 0.65,
-            "ha": "right",
-        },
-    ],
-}
 
 
 def load_repository_data():
@@ -132,105 +111,56 @@ def format_time_label(date, granularity):
 
 
 def create_combined_activity_plot(
-    period_df,
-    granularity,
-    plots_dir,
+    dates,
+    activity_data,
+    labels,
+    title,
+    ylabel="Activity Level",
+    figsize=FIG_SIZE_SINGLE_COL,
+    tick_rotation=45,
 ):
-    fig, ax1 = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
+    setup_plotting_style()
+    fig, ax = plt.subplots(figsize=figsize)
 
-    time_diff = (period_df["period"].max() - period_df["period"].min()).days
-    n_periods = len(period_df)
-    width = max(time_diff / n_periods * 0.8, 15)
+    for i, (data, label) in enumerate(zip(activity_data, labels)):
+        ax.plot(
+            dates,
+            data,
+            label=label,
+            color=MAIN_COLORS[i % len(MAIN_COLORS)],
+            linewidth=PLOT_LINE_WIDTH,
+            marker=MARKER_STYLES[i % len(MARKER_STYLES)],
+            markersize=MARKER_SIZE,
+            markeredgecolor=MARKER_EDGECOLOR,
+            markeredgewidth=MARKER_EDGEWIDTH,
+            markevery=max(1, len(dates) // 10),
+        )
 
-    bars = ax1.bar(
-        period_df["period"],
-        period_df["new_repos"],
-        width=width,
-        alpha=0.6,
-        color=GREY_COLORS_DARK[6],
-        label="New Repositories",
+    ax.set_xlabel("Time", fontsize=FONT_SIZES["axis_label"], labelpad=AXIS_LABEL_PAD)
+    ax.set_ylabel(ylabel, fontsize=FONT_SIZES["axis_label"], labelpad=AXIS_LABEL_PAD)
+    ax.set_title(title, fontsize=FONT_SIZES["title"], pad=TITLE_PAD)
+
+    setup_axis_ticks(
+        ax,
+        dates,
+        "month",
+        n_ticks=min(8, len(dates)),
+        rotation=tick_rotation,
     )
 
-    ax1.set_xlabel("")
-    ax1.set_ylabel(f"New Repositories per {granularity.title()}")
-    ax1.tick_params(axis="y")
+    apply_grid_style(ax, major_alpha=GRID_ALPHA)
 
-    ax2 = ax1.twinx()
-    line = ax2.plot(
-        period_df["period"],
-        period_df["new_repos"].cumsum(),
-        color=GREY_COLORS_DARK[0],
-        linewidth=PLOT_LINE_WIDTH,
-        label="Total Repositories",
-    )
+    setup_legend(ax, loc="upper center", ncol=LEGEND_NCOL, title=None)
 
-    ax2.set_ylabel("Total Number of Repositories")
-    ax2.tick_params(axis="y")
-    ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f"{x:,.0f}"))
-
-    y_min, y_max = ax1.get_ylim()
-
-    for event_config in ANNOTATION_CONFIG["events"]:
-        event_date = pd.Timestamp(event_config["date"])
-
-        closest_period = period_df.iloc[
-            (period_df["period"] - event_date).abs().argsort()[:1]
-        ]
-
-        if not closest_period.empty:
-            period_date = closest_period["period"].iloc[0]
-            bar_height = closest_period["new_repos"].iloc[0]
-
-            text_x = period_date + pd.Timedelta(days=event_config["text_x_days"])
-            text_y = y_max * event_config["text_y_fraction"]
-            line_end_y = text_y - (y_max * ANNOTATION_CONFIG["vertical_spacing"])
-
-            ax1.plot(
-                [period_date, period_date],
-                [bar_height, line_end_y],
-                color=ANNOTATION_CONFIG["line_color"],
-                linestyle="-",
-                linewidth=ANNOTATION_CONFIG["line_width"],
-                alpha=ANNOTATION_CONFIG["line_alpha"],
-            )
-
-            ax1.text(
-                text_x,
-                text_y,
-                event_config["label"],
-                rotation=0,
-                ha=event_config["ha"],
-                va="center",
-                fontsize=FONT_SIZES["annotation"],
-                style=ANNOTATION_CONFIG["text_style"],
-                color=ANNOTATION_CONFIG["text_color"],
-                weight=ANNOTATION_CONFIG["text_weight"],
-            )
-
-    dates = period_df["period"].to_list()
-    setup_axis_ticks(ax1, dates, granularity, n_ticks=8)
-    apply_grid_style(ax1)
-
-    lines1, labels1 = ax1.get_legend_handles_labels()
-    lines2, labels2 = ax2.get_legend_handles_labels()
-    ax2.legend(lines1 + lines2, labels1 + labels2, loc="upper left")
-
-    plt.title(f"Repository Growth Over Time")
-
-    save_plot(fig, plots_dir, f"combined_activity_{granularity}")
+    plt.tight_layout(pad=LAYOUT_PAD)
+    return fig
 
 
 def create_scatter_plot(df, plots_dir):
-    fig, ax = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
+    fig, ax = plt.subplots(figsize=FIG_SIZE_LARGE)
 
     scatter_color = PAIRED_COLORS[1]
-    ax.scatter(
-        df["created_at"],
-        df["updated_at"],
-        alpha=0.4,
-        s=MARKER_SIZE * 5,
-        color=scatter_color,
-    )
+    ax.scatter(df["created_at"], df["updated_at"], alpha=0.4, s=20, color=scatter_color)
 
     min_date = min(df["created_at"].min(), df["updated_at"].min())
     max_date = max(df["created_at"].max(), df["updated_at"].max())
@@ -239,21 +169,20 @@ def create_scatter_plot(df, plots_dir):
         [min_date, max_date],
         linestyle="--",
         color=PAIRED_COLORS[5],
-        linewidth=PLOT_LINE_WIDTH,
+        linewidth=2,
         label="Created = Last Updated",
     )
 
     ax.set_title("Repository Creation Date vs Last Update Date")
     ax.set_xlabel("Creation Date")
     ax.set_ylabel("Last Update Date")
-    apply_grid_style(ax)
     setup_legend(ax)
 
     save_plot(fig, plots_dir, "creation_vs_update_scatter")
 
 
 def create_lifetime_distribution(df, plots_dir):
-    fig, ax = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
+    fig, ax = plt.subplots(figsize=FIG_SIZE_MEDIUM)
 
     lifetime_days = (df["updated_at"] - df["created_at"]).dt.total_seconds() / (
         24 * 60 * 60
@@ -263,20 +192,19 @@ def create_lifetime_distribution(df, plots_dir):
     ax.set_title("Distribution of Repository Lifetimes")
     ax.set_xlabel("Lifetime (days)")
     ax.set_ylabel("Number of Repositories")
-    apply_grid_style(ax)
 
     save_plot(fig, plots_dir, "lifetime_distribution")
 
 
 def create_activity_timeline(period_df, df, granularity, plots_dir):
-    fig, ax = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
+    fig, ax = plt.subplots(figsize=FIG_SIZE_LARGE)
 
     ax.plot(
         period_df["period"],
         period_df["new_repos"].cumsum(),
         label="Total Repositories",
         color=MAIN_COLORS[0],
-        linewidth=PLOT_LINE_WIDTH,
+        linewidth=2,
     )
 
     maintenance_threshold = pd.Timedelta(days=180)
@@ -294,15 +222,14 @@ def create_activity_timeline(period_df, df, granularity, plots_dir):
         period_df["maintained_repos"],
         label="Recently Updated Repositories",
         color=MAIN_COLORS[1],
-        linewidth=PLOT_LINE_WIDTH,
+        linewidth=2,
     )
 
     ax.set_title("Repository Growth and Maintenance Over Time")
     ax.set_xlabel(f"{granularity.title()}")
     ax.set_ylabel("Number of Repositories")
 
-    setup_axis_ticks(ax, period_df["period"].to_list(), granularity, n_ticks=6)
-    apply_grid_style(ax)
+    setup_axis_ticks(ax, period_df["period"].to_list(), granularity)
     setup_legend(ax)
 
     save_plot(fig, plots_dir, f"activity_timeline_{granularity}")

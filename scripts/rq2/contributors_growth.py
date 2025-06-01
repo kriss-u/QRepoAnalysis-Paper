@@ -5,19 +5,23 @@ import matplotlib.pyplot as plt
 
 from ..config.constants import PROCESSED_DATA_DIR, RESULTS_DIR
 from ..utils.logger import setup_logger
-from ..utils.plot_utils import (
-    FONT_SIZES,
-    FONT_WEIGHT_BOLD,
+from ..utils.plot_utils_ieee import (
     GREY_COLORS_DARK,
     setup_plotting_style,
     MAIN_COLORS,
-    FIG_SIZE_LARGE,
+    PAIRED_COLORS,
+    FIG_SIZE_SINGLE_COL,
+    PLOT_LINE_WIDTH,
+    MARKER_SIZE,
     setup_axis_ticks,
     setup_legend,
     save_plot,
+    create_pie_chart,
+    apply_grid_style,
+    FONT_SIZES,
 )
 
-logger = setup_logger(__name__, "rq2", "author_analysis")
+logger = setup_logger(__name__, "rq2", "contributors_growth")
 
 
 def get_pandas_frequency(granularity):
@@ -133,11 +137,9 @@ def analyze_authors_over_time(df, granularity):
 
 def create_author_trends_plot(df, granularity, plots_dir):
     setup_plotting_style()
-    fig, ax1 = plt.subplots(figsize=FIG_SIZE_LARGE)
-    ax2 = ax1.twinx()
+    fig, ax1 = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
 
     dates = df.index
-
     time_diff = (dates.max() - dates.min()).days
     n_periods = len(dates)
     width = max(time_diff / n_periods * 0.8, 15)
@@ -148,44 +150,53 @@ def create_author_trends_plot(df, granularity, plots_dir):
         width=width,
         alpha=0.6,
         color=GREY_COLORS_DARK[6],
-        label="New Authors",
-    )
-
-    lines = ax2.plot(
-        dates,
-        df["total_authors"],
-        color=GREY_COLORS_DARK[0],
-        linewidth=2.5,
-        label="Total Authors",
-    )
-
-    ax1.set_title(
-        f"Contributors Growth Over Time",
-        fontsize=FONT_SIZES["title"],
-        fontweight=FONT_WEIGHT_BOLD,
-        pad=20,
+        label="New Contributors",
     )
 
     ax1.set_xlabel("")
-    ax1.set_ylabel("New Contributors per Period", fontsize=FONT_SIZES["axis_label"])
-    ax2.set_ylabel("Total Contributors", fontsize=FONT_SIZES["axis_label"])
+    ax1.set_ylabel(f"New Contributors per {granularity.title()}")
+    ax1.tick_params(axis="y")
 
-    ax1.set_yscale("log")
-    ax2.set_yscale("log")
-
-    ax1.grid(True, which="major", linestyle="--", alpha=0.7)
-    ax1.set_axisbelow(True)
-
-    setup_axis_ticks(ax1, dates, granularity)
-    ax1.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: format(int(x), ",")))
-    ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: format(int(x), ",")))
-
-    lines = [bars, *lines]
-    labels = ["New Contributors", "Total Contributors"]
-
-    ax1.legend(
-        lines, labels, loc="upper left", fontsize=FONT_SIZES["legend"], frameon=True
+    ax2 = ax1.twinx()
+    line = ax2.plot(
+        dates,
+        df["total_authors"],
+        color=GREY_COLORS_DARK[0],
+        linewidth=PLOT_LINE_WIDTH,
+        label="Total Contributors",
     )
+
+    ax2.set_ylabel("Total Contributors")
+    ax2.tick_params(axis="y")
+
+    ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f"{x:,.0f}"))
+
+    setup_axis_ticks(ax1, dates.to_list(), granularity, n_ticks=8)
+    apply_grid_style(ax1)
+
+    lines1, labels1 = ax1.get_legend_handles_labels()
+    lines2, labels2 = ax2.get_legend_handles_labels()
+
+    # Position legend below chart with proper sizing
+    legend = ax2.legend(
+        lines1 + lines2,
+        labels1 + labels2,
+        bbox_to_anchor=(0, -0.15, 1, 0.1),
+        loc="upper center",
+        mode="expand",
+        ncol=2,
+        frameon=True,
+        fontsize=FONT_SIZES["legend"],
+    )
+    legend.get_frame().set_facecolor("white")
+    legend.get_frame().set_alpha(0.9)
+    legend.get_frame().set_edgecolor("#CCCCCC")
+
+    plt.title(f"Contributors Growth Over Time")
+
+    # Adjust layout to accommodate legend below
+    plt.tight_layout()
+    plt.subplots_adjust(bottom=0.25)
 
     save_plot(fig, plots_dir, f"author_growth_{granularity}")
     plt.close(fig)
