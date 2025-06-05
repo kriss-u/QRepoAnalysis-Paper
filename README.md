@@ -67,6 +67,20 @@ data/processed/
 
 ## Scripts
 
+Create a virtual environment and activate it.
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install packages.
+
+```bash
+pip install pipenv
+pipenv install
+```
+
 `pre_analysis_scripts/` and `scripts` contain the source code to perform the analysis.
 
 ## Loading datasets
