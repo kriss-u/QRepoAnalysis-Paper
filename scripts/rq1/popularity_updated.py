@@ -166,7 +166,13 @@ def create_combined_activity_plot(
 
     ax2.set_ylabel("Total Number of Repositories")
     ax2.tick_params(axis="y")
-    ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f"{x:,.0f}"))
+
+    def format_thousands(x, p):
+        if x >= 1000:
+            return f"{x/1000:.0f}K"
+        return f"{x:.0f}"
+
+    ax2.yaxis.set_major_formatter(plt.FuncFormatter(format_thousands))
 
     y_min, y_max = ax1.get_ylim()
 
@@ -215,7 +221,7 @@ def create_combined_activity_plot(
     lines2, labels2 = ax2.get_legend_handles_labels()
     ax2.legend(lines1 + lines2, labels1 + labels2, loc="upper left")
 
-    plt.title(f"Repository Growth Over Time")
+    # plt.title(f"Repository Growth Over Time")
 
     save_plot(fig, plots_dir, f"combined_activity_{granularity}")
 

@@ -177,8 +177,8 @@ def analyze_commit_sizes(args):
             {"insertions": "sum", "deletions": "sum", "files_changed": "sum"}
         )
 
-        create_volume_plot(resampled_df, args.granularity, plots_dir)
-        create_dual_axis_plot(resampled_df, args.granularity, plots_dir)
+        # create_volume_plot(resampled_df, args.granularity, plots_dir)
+        # create_dual_axis_plot(resampled_df, args.granularity, plots_dir)
 
         export_analysis_results(stats, quarterly_summary, output_dir)
 
@@ -189,6 +189,7 @@ def analyze_commit_sizes(args):
         raise
 
 
+"""
 def create_volume_plot(df, granularity, plots_dir):
     setup_plotting_style()
     fig, ax = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
@@ -260,8 +261,9 @@ def create_volume_plot(df, granularity, plots_dir):
 
     save_plot(fig, plots_dir, f"commit_volume_{granularity}")
     plt.close(fig)
+"""
 
-
+"""
 def create_dual_axis_plot(df, granularity, plots_dir):
     setup_plotting_style()
     fig, ax1 = plt.subplots(figsize=FIG_SIZE_SINGLE_COL)
@@ -340,6 +342,7 @@ def create_dual_axis_plot(df, granularity, plots_dir):
 
     save_plot(fig, plots_dir, f"commit_changes_{granularity}")
     plt.close(fig)
+"""
 
 
 def smooth_with_boundary_conditions(dates, values, num_points=300):
@@ -422,7 +425,8 @@ def create_log_volume_plot(df, granularity, plots_dir):
         else:
             return f"{x:.0f}"
 
-    setup_axis_ticks(ax, dates, granularity, n_ticks=8)
+    setup_axis_ticks(ax, dates, granularity, rotation=0)
+
     setup_legend(ax, title="Changes", loc="lower right")
 
     ax.yaxis.set_major_formatter(plt.FuncFormatter(format_large_numbers))
@@ -533,8 +537,8 @@ def analyze_commit_sizes_with_log(args):
             {"insertions": "sum", "deletions": "sum", "files_changed": "sum"}
         )
 
-        create_volume_plot(resampled_df, args.granularity, plots_dir)
-        create_dual_axis_plot(resampled_df, args.granularity, plots_dir)
+        # create_volume_plot(resampled_df, args.granularity, plots_dir)
+        # create_dual_axis_plot(resampled_df, args.granularity, plots_dir)
         create_log_volume_plot(resampled_df, args.granularity, plots_dir)
         create_log_dual_axis_plot(resampled_df, args.granularity, plots_dir)
 

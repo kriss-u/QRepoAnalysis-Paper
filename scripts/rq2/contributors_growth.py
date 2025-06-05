@@ -169,7 +169,12 @@ def create_author_trends_plot(df, granularity, plots_dir):
     ax2.set_ylabel("Total Contributors")
     ax2.tick_params(axis="y")
 
-    ax2.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f"{x:,.0f}"))
+    def format_thousands(x, p):
+        if x >= 1000:
+            return f"{x/1000:.0f}K"
+        return f"{x:.0f}"
+
+    ax2.yaxis.set_major_formatter(plt.FuncFormatter(format_thousands))
 
     setup_axis_ticks(ax1, dates.to_list(), granularity, n_ticks=8)
     apply_grid_style(ax1)
@@ -177,26 +182,8 @@ def create_author_trends_plot(df, granularity, plots_dir):
     lines1, labels1 = ax1.get_legend_handles_labels()
     lines2, labels2 = ax2.get_legend_handles_labels()
 
-    # Position legend below chart with proper sizing
-    legend = ax2.legend(
-        lines1 + lines2,
-        labels1 + labels2,
-        bbox_to_anchor=(0, -0.15, 1, 0.1),
-        loc="upper center",
-        mode="expand",
-        ncol=2,
-        frameon=True,
-        fontsize=FONT_SIZES["legend"],
-    )
-    legend.get_frame().set_facecolor("white")
-    legend.get_frame().set_alpha(0.9)
-    legend.get_frame().set_edgecolor("#CCCCCC")
-
-    plt.title(f"Contributors Growth Over Time")
-
-    # Adjust layout to accommodate legend below
+    ax2.legend(lines1 + lines2, labels1 + labels2, loc="upper left")
     plt.tight_layout()
-    plt.subplots_adjust(bottom=0.25)
 
     save_plot(fig, plots_dir, f"author_growth_{granularity}")
     plt.close(fig)

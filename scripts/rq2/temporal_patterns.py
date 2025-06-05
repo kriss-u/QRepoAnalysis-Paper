@@ -127,7 +127,9 @@ def create_fork_comparison_plot(time_series, granularity, output_dir):
     apply_grid_style(ax)
 
     ax.set_yscale("log")
-    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f"{int(x):,}"))
+    ax.yaxis.set_major_formatter(
+        plt.FuncFormatter(lambda x, p: f"{x/1000:.0f}K" if x >= 1000 else f"{int(x)}")
+    )
 
     plots_dir = output_dir / "plots"
     plots_dir.mkdir(parents=True, exist_ok=True)
@@ -180,7 +182,11 @@ def create_fork_comparison_plot_log_smooth(time_series, granularity, output_dir)
     apply_grid_style(ax)
 
     ax.yaxis.set_major_formatter(
-        plt.FuncFormatter(lambda x, p: "0" if x < 1 else f"{int(x):,}")
+        plt.FuncFormatter(
+            lambda x, p: (
+                "0" if x < 1 else (f"{x/1000:.0f}K" if x >= 1000 else f"{int(x)}")
+            )
+        )
     )
 
     plots_dir = output_dir / "plots"
@@ -232,7 +238,9 @@ def create_cumulative_comparison_plot(time_series, granularity, output_dir):
     setup_legend(ax, title="Repository Type", loc="upper left", ncol=1)
     apply_grid_style(ax)
 
-    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f"{int(x):,}"))
+    ax.yaxis.set_major_formatter(
+        plt.FuncFormatter(lambda x, p: f"{x/1000:.0f}K" if x >= 1000 else f"{int(x)}")
+    )
 
     plots_dir = output_dir / "plots"
     plots_dir.mkdir(parents=True, exist_ok=True)
@@ -315,7 +323,9 @@ def create_total_commits_plot(time_series, granularity, output_dir):
     apply_grid_style(ax)
 
     ax.set_yscale("log")
-    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f"{int(x):,}"))
+    ax.yaxis.set_major_formatter(
+        plt.FuncFormatter(lambda x, p: f"{x/1000:.0f}K" if x >= 1000 else f"{int(x)}")
+    )
 
     plots_dir = output_dir / "plots"
     plots_dir.mkdir(parents=True, exist_ok=True)

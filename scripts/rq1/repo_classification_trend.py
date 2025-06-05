@@ -117,7 +117,8 @@ def calculate_category_metrics(df):
 
 def create_category_timeline(cumulative_df, granularity, plots_dir):
     fig, ax = plt.subplots(
-        figsize=(FIG_SIZE_SINGLE_COL[0], FIG_SIZE_SINGLE_COL[1] + 1.0)
+        figsize=(FIG_SIZE_SINGLE_COL[0], FIG_SIZE_SINGLE_COL[1] * 1.28)
+        # figsize=FIG_SIZE_SINGLE_COL,
     )
 
     final_counts = (
@@ -155,24 +156,30 @@ def create_category_timeline(cumulative_df, granularity, plots_dir):
         current_ticks.sort()
         ax.set_yticks(current_ticks)
 
-    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: "{:,.0f}".format(x)))
+    ax.yaxis.set_major_formatter(
+        plt.FuncFormatter(lambda x, p: f"{x/1000:.0f}K" if x >= 1000 else f"{int(x)}")
+    )
 
     apply_grid_style(ax)
 
+    legend_labels = [category.replace(" ", "\n") for category in categories]
+
     legend = ax.legend(
+        legend_labels,
         title="Categories",
-        bbox_to_anchor=(0.5, -0.25),
-        loc="upper center",
+        loc="upper left",
         ncol=2,
-        frameon=True,
+        frameon=False,
         fontsize=FONT_SIZES["legend"],
         title_fontsize=FONT_SIZES["legend"],
+        handlelength=0.5,
+        handletextpad=0.25,
+        columnspacing=0.25,
     )
     legend.get_frame().set_facecolor("white")
     legend.get_frame().set_alpha(0.9)
     legend.get_frame().set_edgecolor("#CCCCCC")
 
-    # Adjust layout with minimal bottom adjustment since we increased figure height
     plt.tight_layout()
     plt.subplots_adjust(bottom=0.28)
 

@@ -302,9 +302,9 @@ def create_trend_plot(
     if use_log:
         fig, ax = plt.subplots(figsize=(16, 9))
     else:
-        # Increase figure height to accommodate legend without squeezing chart
         fig, ax = plt.subplots(
-            figsize=(FIG_SIZE_SINGLE_COL[0], FIG_SIZE_SINGLE_COL[1] + 1.0)
+            # figsize=(FIG_SIZE_SINGLE_COL[0], FIG_SIZE_SINGLE_COL[1] + 1.0)
+            figsize=FIG_SIZE_SINGLE_COL
         )
 
     df_counts = df.set_index("created_at")
@@ -340,38 +340,28 @@ def create_trend_plot(
     if use_log:
         ax.set_yscale("log")
         ax.set_ylim(bottom=1)
-        ax.yaxis.set_major_formatter(
-            plt.FuncFormatter(lambda x, p: "{:,.0f}".format(x))
-        )
-        legend = ax.legend(
-            title=plot_type,
-            bbox_to_anchor=(0.5, -0.25),
-            loc="upper center",
-            ncol=ncol,
-            frameon=True,
-            fontsize=FONT_SIZES["legend"],
-            title_fontsize=FONT_SIZES["legend"],
-        )
-        legend.get_frame().set_facecolor("white")
-        legend.get_frame().set_alpha(0.9)
-        legend.get_frame().set_edgecolor("#CCCCCC")
     else:
         ax.set_ylim(bottom=0)
-        ax.yaxis.set_major_formatter(
-            plt.FuncFormatter(lambda x, p: "{:,.0f}".format(x))
-        )
-        legend = ax.legend(
-            title=plot_type,
-            bbox_to_anchor=(0.5, -0.25),
-            loc="upper center",
-            ncol=ncol,
-            frameon=True,
-            fontsize=FONT_SIZES["legend"],
-            title_fontsize=FONT_SIZES["legend"],
-        )
-        legend.get_frame().set_facecolor("white")
-        legend.get_frame().set_alpha(0.9)
-        legend.get_frame().set_edgecolor("#CCCCCC")
+
+    def format_thousands(x, p):
+        if x >= 1000:
+            return f"{x/1000:.0f}K"
+        return f"{x:.0f}"
+
+    legend = ax.legend(
+        title=plot_type,
+        loc="upper left",
+        ncol=ncol,
+        frameon=False,
+        fontsize=FONT_SIZES["legend"],
+        title_fontsize=FONT_SIZES["legend"],
+        handlelength=0.5,
+        handletextpad=0.25,
+        columnspacing=0.25,
+    )
+    legend.get_frame().set_facecolor("white")
+    legend.get_frame().set_alpha(0.9)
+    legend.get_frame().set_edgecolor("#CCCCCC")
 
     ax.set_xlabel("")
     ax.set_ylabel(
@@ -381,8 +371,8 @@ def create_trend_plot(
 
     apply_grid_style(ax)
     setup_axis_ticks(ax, dates, granularity, n_ticks=8)
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(format_thousands))
 
-    # Adjust layout with minimal bottom adjustment since we increased figure height
     plt.tight_layout()
     plt.subplots_adjust(bottom=0.28)
 

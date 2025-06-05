@@ -193,6 +193,15 @@ def create_maintenance_distribution_plot(stats, output_dir):
     low_maint_commits = []
     total_commits = []
 
+    label_mapping = {
+        "Perfective": "P",
+        "Corrective": "C",
+        "Adaptive": "A",
+        "Adaptive Perfective": "AP",
+        "Corrective Perfective": "CP",
+        "Corrective Adaptive": "CA",
+    }
+
     for classification, data in stats["by_classification"].items():
         if classification not in ["Unknown", "nan", "Corrective Adaptive Perfective"]:
             classifications.append(classification)
@@ -205,8 +214,10 @@ def create_maintenance_distribution_plot(stats, output_dir):
     high_maint_commits = [high_maint_commits[i] for i in sort_idx]
     low_maint_commits = [low_maint_commits[i] for i in sort_idx]
 
+    abbreviated_classifications = [label_mapping.get(c, c) for c in classifications]
+
     fig, ax = plt.subplots(
-        figsize=(FIG_SIZE_SINGLE_COL[0], FIG_SIZE_SINGLE_COL[1] * 1.5)
+        figsize=(FIG_SIZE_SINGLE_COL[0], FIG_SIZE_SINGLE_COL[1] * 1.12)
     )
 
     x = np.arange(len(classifications))
@@ -233,9 +244,8 @@ def create_maintenance_distribution_plot(stats, output_dir):
     )
 
     ax.set_xticks(x)
-    ax.set_xticklabels(
-        classifications, rotation=45, ha="right", fontsize=FONT_SIZES["tick"]
-    )
+    # Use abbreviated labels and remove rotation since they're now shorter
+    ax.set_xticklabels(abbreviated_classifications, fontsize=FONT_SIZES["tick"])
 
     ax.set_yscale("log")
 
@@ -282,7 +292,17 @@ def create_maintenance_distribution_plot(stats, output_dir):
     add_value_labels(high_bars)
     add_value_labels(low_bars)
 
-    setup_legend(ax, loc="upper right")
+    setup_legend(ax, loc="upper right", frameon=False)
+
+    ax.text(
+        0.5,
+        -0.10,
+        "P=Perfective, C=Corrective, A=Adaptive",
+        transform=ax.transAxes,
+        fontsize=FONT_SIZES["annotation"],
+        horizontalalignment="center",
+        verticalalignment="top",
+    )
 
     plt.tight_layout()
 

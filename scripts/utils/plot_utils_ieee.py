@@ -13,7 +13,7 @@ PIE_COLORS = sns.color_palette("Set2", n_colors=12)
 GREY_COLORS_DARK = sns.color_palette("Greys_r", n_colors=10)
 
 # Figure sizes
-FIG_SIZE_SINGLE_COL = (3.5, 2.5)
+FIG_SIZE_SINGLE_COL = (3.5, 2.2)
 # FIG_SIZE_DOUBLE_COL = (7.16, 4.0)
 FIG_SIZE_MEDIUM = (3.5, 3.0)
 FIG_SIZE_SMALL = (3.5, 2.0)
@@ -46,12 +46,12 @@ FONT_WEIGHT_BOLD = "bold"
 
 def format_time_label(date, granularity):
     if granularity == "week":
-        return date.strftime("%Y-W%W")
+        return f"{date.year}\nW{date.strftime('%W')}"
     elif granularity == "month":
-        return date.strftime("%Y-%m")
+        return f"{date.year}\n{date.strftime('%b')}"
     elif granularity == "quarter":
         quarter = (date.month - 1) // 3 + 1
-        return f"{date.year} Q{quarter}"
+        return f"{date.year}\nQ{quarter}"
     else:
         return str(date.year)
 
@@ -95,17 +95,20 @@ def setup_plotting_style():
     )
 
 
-def setup_axis_ticks(ax, dates, granularity, n_ticks=12, rotation=45):
-    n_ticks = min(n_ticks if n_ticks else 12, len(dates))
+def setup_axis_ticks(ax, dates, granularity, n_ticks=8, rotation=0):
+    n_ticks = min(n_ticks if n_ticks else 8, len(dates))
     tick_indices = np.linspace(0, len(dates) - 1, n_ticks, dtype=int)
     tick_dates = [dates[i] for i in tick_indices]
 
     ax.set_xticks(tick_dates)
-    formatted_labels = [format_time_label(date, granularity) for date in tick_dates]
+    formatted_labels = [
+        format_time_label(date, granularity).replace(" ", "\n") for date in tick_dates
+    ]
     ax.set_xticklabels(
         formatted_labels,
         rotation=rotation,
-        ha="right",
+        ha="center",
+        va="top",
         fontsize=FONT_SIZES["tick"],
         color="#333333",
     )
@@ -128,12 +131,45 @@ def setup_axis_ticks(ax, dates, granularity, n_ticks=12, rotation=45):
         spine.set_linewidth(0.6)
 
 
-def setup_legend(ax, title=None, loc="upper left", ncol=1):
+def setup_categorical_axis_ticks(ax, labels, n_ticks=None, rotation=0):
+    """Similar to setup_axis_ticks but for categorical (non-date) x-axis labels"""
+    n_ticks = min(n_ticks if n_ticks else len(labels), len(labels))
+    tick_positions = np.arange(len(labels))
+
+    formatted_labels = [label.replace(" ", "\n") for label in labels]
+
+    ax.set_xticks(tick_positions)
+    ax.set_xticklabels(
+        formatted_labels,
+        rotation=rotation,
+        ha="center",
+        va="top",
+        fontsize=FONT_SIZES["tick"],
+        color="#333333",
+    )
+
+    ax.tick_params(
+        axis="x",
+        which="major",
+        direction="out",
+        length=4,
+        width=0.8,
+        color="#333333",
+        top=False,
+        bottom=True,
+    )
+
+    for spine in ax.spines.values():
+        spine.set_edgecolor("#333333")
+        spine.set_linewidth(0.6)
+
+
+def setup_legend(ax, title=None, loc="upper left", ncol=1, frameon=True):
     legend = ax.legend(
         title=title,
         loc=loc,
         ncol=ncol,
-        frameon=True,
+        frameon=frameon,
         facecolor="white",
         edgecolor="#CCCCCC",
         framealpha=0.8,
